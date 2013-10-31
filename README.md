@@ -3,8 +3,8 @@
 A port of polymer.js' [polymer-ui-elements](https://github.com/Polymer/polymer-ui-elements) to Polymer.dart.
 The intent of the authors is to contribute the work to the Dart project itself (https://www.dartlang.org).
 
-### Non-visual elements can be found in
-* [polymer_elements (Dart)](https://github.com/ErikGrimes/polymer_elements)
+### Non-visual elements for Dart can be found in
+* [polymer_elements](https://github.com/ErikGrimes/polymer_elements)
 
 ## General notes
 
