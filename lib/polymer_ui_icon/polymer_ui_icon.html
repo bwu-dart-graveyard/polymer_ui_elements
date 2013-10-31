@@ -1,0 +1,72 @@
+<!--
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+-->
+
+<!--
+/**
+* Polymer UI Elements
+*
+* @module Polymer UI Elements
+*/  
+/**
+ * polymer-ui-icon is a 24x24 glyph expressed as a background-image.
+ *
+ * Example:
+ *
+ *     <polymer-ui-icon src="star.png"></polymer-ui-icon>
+ *
+ * Optionally can use other size like 32x32 by setting the attribute "size" to "32":
+ *
+ *     <polymer-ui-icon src="big_star.png" size="32"></polymer-ui-icon>
+ *
+ * Polymer includes an icon set.  The property "icon" can be used
+ * to specify which icon to use.
+ *
+ * Example:
+ *
+ *     <polymer-ui-icon icon="menu"></polymer-ui-icon>
+ *
+ * @class polymer-ui-icon
+ */
+-->
+
+<link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
+
+<polymer-element name="polymer-ui-icon" extends="polymer-ui-theme-aware" attributes="src size index icon">
+  <template>
+    <link rel="stylesheet" href="polymer-ui-icon.css"> 
+    <!-- TODO remove style element and content when css import is fixed -->
+    <style>
+/*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+@host {
+  * {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    background-repeat: no-repeat;
+  }
+
+  .polymer-ui-dark-icon, .polymer-ui-light-theme {
+    background-position: -24px 0;
+  }
+
+  .polymer-ui-light-icon, .polymer-ui-dark-theme {
+    background-position: -24px 0;
+  }
+
+  .polymer-ui-icons {
+    background-image: url(packages/polymer_ui_elements/polymer_ui_icon/action-icons.png);
+  }
+}    
+    </style>
+    <content></content>
+  </template>
+
+  <script type="application/dart" src='polymer_ui_icon.dart'></script>
+</polymer-element>
