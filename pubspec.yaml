@@ -1,0 +1,6 @@
+name: polymer_ui_elements
+version: 0.0.1
+author: polymer_ui_elements.dart authors
+description: A Dart port of polymer-ui-elements (https://github.com/Polymer/polymer-ui-elements).
+dependencies:
+  polymer: any
