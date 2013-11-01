@@ -14,32 +14,32 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 Element name                    |   Status    | Comment
 ------------------------------- | ----------- | ---
-polymer-ui-accordion</td>       | not started |
-polymer-ui-animated-pages</td>  | not started |  
-polymer-ui-arrow</td>           | not started |  
-polymer-ui-breadcrumbs</td>     | not started |  
-polymer-ui-card</td>            | not started |  
-polymer-ui-collapsible</td>     | not started |  
-polymer-ui-field</td>           | not started |  
-polymer-ui-icon</td>            | **ported**  |  
-polymer-ui-icon-button</td>     | **ported**  |  
-polymer-ui-menu</td>            | not started |  
-polymer-ui-menu-button</td>     | not started |  
-polymer-ui-menu-item</td>       | not started |  
-polymer-ui-nav-arrow</td>       | not started |  
-polymer-ui-overlay</td>         | not started |  
-polymer-ui-pages</td>           | not started |  
-polymer-ui-ratings</td>         | not started |  
-polymer-ui-scaffold</td>        | not started |  
-polymer-ui-sidebar</td>         | not started |  
-polymer-ui-sidebar-headers</td> | not started |  
-polymer-ui-sidebar-menu</td>    | not started |  
-polymer-ui-splitter</td>        | not started |  
-polymer-ui-submenu-item</td>    | not started |  
-polymer-ui-tabs</td>            | not started |  
-polymer-ui-theme-aware</td>     | **ported**  |  
-polymer-ui-toggle-button</td>   | not started |  
-polymer-ui-toolbar</td>         | not started | contains a nonfunctional dummy element to resolve dependencies |
+polymer-ui-accordion            | not started |
+polymer-ui-animated-pages       | not started |
+polymer-ui-arrow                | not started |
+polymer-ui-breadcrumbs          | not started |
+polymer-ui-card                 | not started |
+polymer-ui-collapsible          | not started |
+polymer-ui-field                | not started |
+polymer-ui-icon                 | **ported**  |
+polymer-ui-icon-button          | **ported**  |
+polymer-ui-menu                 | not started |
+polymer-ui-menu-button          | not started |
+polymer-ui-menu-item            | not started |
+polymer-ui-nav-arrow            | not started |
+polymer-ui-overlay              | not started |
+polymer-ui-pages                | not started |
+polymer-ui-ratings              | not started |
+polymer-ui-scaffold             | not started |
+polymer-ui-sidebar              | not started |
+polymer-ui-sidebar-headers      | not started |
+polymer-ui-sidebar-menu         | not started |
+polymer-ui-splitter             | not started |
+polymer-ui-submenu-item         | not started |
+polymer-ui-tabs                 | not started |
+polymer-ui-theme-aware          | **ported**  |
+polymer-ui-toggle-button        | not started |
+polymer-ui-toolbar              | not started | contains a nonfunctional dummy element to resolve dependencies
 
 
 ### License
