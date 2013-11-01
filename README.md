@@ -12,38 +12,35 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 ### Status
 
-<table>
-  <tr>
-    <th>Element name</th><th>Status</th><th>Comment</th> </tr>
-  </tr>
-  <tr>    <td>polymer-ui-accordion</td>       <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-animated-pages</td>  <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-arrow</td>           <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-breadcrumbs</td>     <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-card</td>            <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-collapsible</td>     <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-field</td>           <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-icon</td>            <td><strong>ported<strong></td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-icon-button</td>     <td><strong>ported<strong></td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-menu</td>            <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-menu-button</td>     <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-menu-item</td>       <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-nav-arrow</td>       <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-overlay</td>         <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-pages</td>           <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-ratings</td>         <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-scaffold</td>        <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-sidebar</td>         <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-sidebar-headers</td> <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-sidebar-menu</td>    <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-splitter</td>        <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-submenu-item</td>    <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-tabs</td>            <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-theme-aware</td>     <td><strong>ported<strong></td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-toggle-button</td>   <td>not started</td>   <td> </td>    </tr>
-  <tr>    <td>polymer-ui-toolbar</td>         <td>not started</td>   <td>contains a nonfunctional dummy element to resolve dependencies</td>    </tr>
+Element name                    |   Status    | Comment
+------------------------------- | ----------- | ---
+polymer-ui-accordion</td>       | not started |
+polymer-ui-animated-pages</td>  | not started |  
+polymer-ui-arrow</td>           | not started |  
+polymer-ui-breadcrumbs</td>     | not started |  
+polymer-ui-card</td>            | not started |  
+polymer-ui-collapsible</td>     | not started |  
+polymer-ui-field</td>           | not started |  
+polymer-ui-icon</td>            | **ported**  |  
+polymer-ui-icon-button</td>     | **ported**  |  
+polymer-ui-menu</td>            | not started |  
+polymer-ui-menu-button</td>     | not started |  
+polymer-ui-menu-item</td>       | not started |  
+polymer-ui-nav-arrow</td>       | not started |  
+polymer-ui-overlay</td>         | not started |  
+polymer-ui-pages</td>           | not started |  
+polymer-ui-ratings</td>         | not started |  
+polymer-ui-scaffold</td>        | not started |  
+polymer-ui-sidebar</td>         | not started |  
+polymer-ui-sidebar-headers</td> | not started |  
+polymer-ui-sidebar-menu</td>    | not started |  
+polymer-ui-splitter</td>        | not started |  
+polymer-ui-submenu-item</td>    | not started |  
+polymer-ui-tabs</td>            | not started |  
+polymer-ui-theme-aware</td>     | **ported**  |  
+polymer-ui-toggle-button</td>   | not started |  
+polymer-ui-toolbar</td>         | not started | contains a nonfunctional dummy element to resolve dependencies |
 
-</table>
 
 ### License
 BSD 3-clause license (see [LICENSE](https://github.com/ErikGrimes/polymer-ui_elements/blob/master/LICENSE) file).
