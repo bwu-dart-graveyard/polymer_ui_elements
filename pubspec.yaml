@@ -4,7 +4,7 @@ author: polymer_ui_elements.dart authors
 description: A Dart port of polymer-ui-elements (https://github.com/Polymer/polymer-ui-elements).
 homepage: https://github.com/ErikGrimes/polymer-ui-elements
 environment:
-  sdk: '>=0.8.8 <0.8.9'
+  sdk: '>=0.8.9 <0.8.10'
 dependencies:
   polymer: any
 dev_dependencies:

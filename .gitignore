@@ -2,6 +2,7 @@ packages
 build
 out
 deploy
+doc
 _from_packages
 pubspec.lock
 .project
