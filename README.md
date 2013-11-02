@@ -8,7 +8,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 ## General notes
 
-* Current development status requires [Dart SDK build 29720](http://gsdview.appspot.com/dart-editor-archive-continuous/29720/) (0.8.9)
+* Current development status requires [Dart SDK build 29746](http://gsdview.appspot.com/dart-editor-archive-continuous/29746/) (0.8.10.0)
 
 ### Status
 
