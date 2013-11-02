@@ -12,8 +12,8 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 ### Status
 
-Element name               | Status      | Comment
----------------------------------------------------
+Element name               |   Status    | Comment
+-------------------------- | ----------- | --------
 polymer-ui-accordion       | not started |     
 polymer-ui-animated-pages  | not started |     
 polymer-ui-arrow           | not started |     
@@ -40,6 +40,7 @@ polymer-ui-tabs            | not started |
 polymer-ui-theme-aware     | **ported**  |
 polymer-ui-toggle-button   | not started |
 polymer-ui-toolbar         | not started | contains a nonfunctional dummy element to resolve dependencies |     
+
 
 ### License
 BSD 3-clause license (see [LICENSE](https://github.com/ErikGrimes/polymer-ui_elements/blob/master/LICENSE) file).
