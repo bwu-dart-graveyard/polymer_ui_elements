@@ -3,7 +3,9 @@ version: 0.0.9
 authors: 
 - Erik Grimes <erik.grimes@gmail.com>
 - Günter Zöchbauer <guenter@gzoechbauer.com>
-description: A Dart port of polymer-ui-elements (https://github.com/Polymer/polymer-ui-elements).
+description: >
+  A Dart port of polymer-ui-elements 
+  (https://github.com/Polymer/polymer-ui-elements).
 homepage: https://github.com/ErikGrimes/polymer_ui_elements
 environment:
   sdk: '>=0.8.9 <0.8.11'
