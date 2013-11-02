@@ -26,5 +26,5 @@ LIB=$LIB,polymer_ui_tabs
 LIB=$LIB,polymer_ui_theme_aware
 LIB=$LIB,polymer_ui_toggle_button
 LIB=$LIB,polymer_ui_toolbar
-dartdoc --package-root=packages/ --out=doc --include-lib=$LIB lib/polymer_ui_elements.dart
+dartdoc --package-root=packages/ --out=../polymer_ui_elements_doc --include-lib=$LIB lib/polymer_ui_elements.dart
 #
