@@ -14,7 +14,7 @@
  * @class polymer-ui-arrow
  */
 
-library polymer.ui_elements.polymer_ui_arrow;
+library polymer_ui_elements.polymer_ui_arrow;
 
 import 'dart:async';
 import 'package:polymer/polymer.dart';

@@ -3,12 +3,28 @@
 // governed by a BSD-style license that can be found in the LICENSE file.
 // This work is a port of the polymer-elements from the Polymer project, 
 // http://www.polymer-project.org/. 
-library polymer_ui_icon_button;
+library polymer_ui_elements.polymer_ui_icon_button;
 
 import 'package:polymer/polymer.dart';
 import 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
 import 'package:logging/logging.dart';
 
+/**
+ * polymer-ui-icon-button enables you to place an image centered in a button.
+ *
+ * Example:
+ *
+ *     <polymer-ui-icon-button src="star.png"></polymer-ui-icon-button>
+ *
+ * Polymer includes an icon set.  The property "icon" can be used
+ * to specify which icon to use.
+ *
+ * Example:
+ *
+ *     <polymer-ui-icon-button icon="menu"></polymer-ui-icon-button>
+ *
+ * @class polymer-ui-icon-button
+ */
 @CustomTag('polymer-ui-icon-button')
 class PolymerUiIconButton extends PolymerUiThemeAware {
   PolymerUiIconButton.created() : super.created();

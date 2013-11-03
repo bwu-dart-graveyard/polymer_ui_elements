@@ -3,12 +3,32 @@
 // governed by a BSD-style license that can be found in the LICENSE file.
 // This work is a port of the polymer-elements from the Polymer project, 
 // http://www.polymer-project.org/. 
-library polymer_ui_icon;
+library polymer_ui_elements.polymer_ui_icon;
 
 import 'package:polymer/polymer.dart';
 import 'package:logging/logging.dart';
 import 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
 
+/**
+ * polymer-ui-icon is a 24x24 glyph expressed as a background-image.
+ *
+ * Example:
+ *
+ *     <polymer-ui-icon src="star.png"></polymer-ui-icon>
+ *
+ * Optionally can use other size like 32x32 by setting the attribute "size" to "32":
+ *
+ *     <polymer-ui-icon src="big_star.png" size="32"></polymer-ui-icon>
+ *
+ * Polymer includes an icon set.  The property "icon" can be used
+ * to specify which icon to use.
+ *
+ * Example:
+ *
+ *     <polymer-ui-icon icon="menu"></polymer-ui-icon>
+ *
+ * @class polymer-ui-icon
+ */
 @CustomTag('polymer-ui-icon')
 class PolymerUiIcon extends PolymerUiThemeAware {
   PolymerUiIcon.created() : super.created() {

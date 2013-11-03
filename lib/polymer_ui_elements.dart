@@ -4,6 +4,9 @@
 // This work is a port of the polymer-elements from the Polymer project, 
 // http://www.polymer-project.org/. 
 
+/**
+ * Polymer UI Elements
+ */
 library polymer_ui_elements;
 
 // for dartdoc as entrypoint 
