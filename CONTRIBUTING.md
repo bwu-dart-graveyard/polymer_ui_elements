@@ -1,1 +1,2 @@
-See https://github.com/Polymer/polymer/blob/master/CONTRIBUTING.md
+https://code.google.com/p/dart/wiki/Contributing
+

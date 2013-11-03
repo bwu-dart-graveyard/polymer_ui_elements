@@ -6,6 +6,9 @@ The intent of the authors is to contribute the work to the Dart project itself (
 ### Non-visual elements for Dart can be found in
 * [polymer_elements](https://github.com/ErikGrimes/polymer_elements)
 
+## Documentation
+* [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
+
 ## General notes
 
 * Current development status requires [Dart SDK build 29746](http://gsdview.appspot.com/dart-editor-archive-continuous/29746/) (0.8.10.0)
