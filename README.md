@@ -45,6 +45,6 @@ polymer-ui-toolbar         | not started | contains a nonfunctional dummy elemen
 ### License
 BSD 3-clause license (see [LICENSE](https://github.com/ErikGrimes/polymer-ui_elements/blob/master/LICENSE) file).
 
-[![Build Status](https://drone.io/github.com/ErikGrimes/polymer-ui-elements/status.png)](https://drone.io/github.com/ErikGrimes/polymer-ui-elements/latest)
+[![Build Status](https://drone.io/github.com/ErikGrimes/polymer_ui_elements/status.png)](https://drone.io/github.com/ErikGrimes/polymer_ui_elements/latest)
 
 
