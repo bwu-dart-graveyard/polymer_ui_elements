@@ -12,6 +12,7 @@ environment:
   sdk: '>=0.8.9 <0.8.11'
 dependencies:
   polymer: any
+  polymer_elements: any
 dev_dependencies:
   unittest: any
 transformers:

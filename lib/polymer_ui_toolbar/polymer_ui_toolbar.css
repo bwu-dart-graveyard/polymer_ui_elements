@@ -1,19 +1,4 @@
-<!-- 
-Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
-the AUTHORS file for details. All rights reserved. Use of this source code is 
-governed by a BSD-style license that can be found in the LICENSE file. 
-This work is a port of the polymer-elements from the Polymer project, 
-http://www.polymer-project.org/. 
--->
-<link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html"> <!-- TODO fix import path when Dart supports it -->
-<link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
-
-<polymer-element name="polymer-ui-toolbar" extends="polymer-ui-theme-aware" attributes="responsiveWidth">
-  <template>
-    <link rel="stylesheet" href="polymer_ui_toolbar.css">
-    <!-- TODO remove style element when style import works -->
-    <style>
-    /*
+/*
 Copyright 2013 The Polymer Authors. All rights reserved.
 Use of this source code is governed by a BSD-style
 license that can be found in the LICENSE file.
@@ -27,12 +12,12 @@ license that can be found in the LICENSE file.
     -moz-box-sizing: border-box;
     /* border/shadow */
 /*    border-bottom: 1px solid rgba(0, 0, 0, 0.28);*/
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    /* size */
+		border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+		/* size */
     height: 60px;
     font-size: 21px;
-    font-family: 'Helvetica Neue Medium', 'HelveticaNeue-Medium', Helvetica, sans-serif;
-    position: relative;
+		font-family: 'Helvetica Neue Medium', 'HelveticaNeue-Medium', Helvetica, sans-serif;
+		position: relative;
   }
 
   .polymer-ui-light-theme {
@@ -80,11 +65,3 @@ content::-webkit-distributed(> polymer-ui-toolbar:not(.narrow-layout)) {
   border: 0;
   background: transparent none;
 }
-    
-    </style>
-    <polymer-flex-layout align="center"></polymer-flex-layout>
-    <!-- TODO <polymer-media-query query="max-width: {{responsiveWidth}}" queryMatches="{{queryMatches}}"></polymer-media-query> -->
-    <content></content>
-  </template>
-  <script type="application/dart" src='polymer_ui_toolbar.dart'></script>
-</polymer-element>

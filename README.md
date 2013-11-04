@@ -42,7 +42,7 @@ polymer-ui-submenu-item    | not started |
 polymer-ui-tabs            | not started |
 polymer-ui-theme-aware     | **ported**  |
 polymer-ui-toggle-button   | not started |
-polymer-ui-toolbar         | not started | contains a nonfunctional dummy element to resolve dependencies |     
+polymer-ui-toolbar         | ported | depends on polymer-flex-layout which has issues |     
 
 
 ### License
