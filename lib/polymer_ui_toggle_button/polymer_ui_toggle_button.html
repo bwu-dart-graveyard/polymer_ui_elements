@@ -6,9 +6,303 @@ governed by a BSD-style license that can be found in the LICENSE file.
 This work is a port of the polymer-elements from the Polymer project, 
 http://www.polymer-project.org/. 
 -->
-<polymer-element name="polymer-ui-toggle-button" noscript>
+<polymer-element name="polymer-ui-toggle-button" attributes="value noCaption onCaption offCaption"
+    on-tap="{{toggle}}" on-click="{{toggle}}" on-trackstart="{{trackStart}}" on-track="{{track}}" on-trackend="{{trackEnd}}" on-flick="{{flick}}">
   <template>
-    TODO polymer-ui-toggle-button
+    <link rel="stylesheet" href="polymer-ui-toggle-button.css" />
+    <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.css" />
+    <!--  remove when Dart supports external stylesheets -->
+    <style>
+    /*
+ * Copyright 2013 The Polymer Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE file.
+ */
+@host {
+  * {
+    display: inline-block;
+    position: relative;
+    min-width: 60px;
+    height: 24px;
+    overflow: hidden;
+    border: 1px solid #b6b6b6;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 1px 0 rgba(0,0,0,0.1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-transition: border 0.130s ease-out;
+    transition: border 0.130s ease-out;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  *.on {
+    border: 1px solid #0fb2c6;
+  }
+}
+
+.toggle {
+  position: absolute;
+  left: -webkit-calc(-100% + 24px);
+  left: -moz-calc(-100% + 24px);
+  left: calc(-100% + 24px);
+  width: -webkit-calc(200% - 24px);
+  width: -moz-calc(200% - 24px);
+  width: calc(200% - 24px);
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  /* Safari bug: https://bugs.webkit.org/show_bug.cgi?id=100568 */
+  /*-webkit-transition: left 0.130s ease-out;*/
+  transition: left 0.130s ease-out;
+}
+
+/* workaround for https://github.com/Polymer/platform/issues/36 */
+/* @polyfill-unscoped-rule polymer-ui-toggle-button .toggle {
+  left: -webkit-calc(-100% + 24px);
+  width: -webkit-calc(200% - 24px);
+} */
+
+.toggle.dragging {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.toggle.on {
+  left: 0;
+}
+
+.toggle > * {
+  float: left;
+}
+
+.on-label, .off-label {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.on-label {
+  padding-right: 12px;
+  background-color: #2fb2c6;
+  color: white;
+}
+
+.off-label {
+  padding-left: 12px;
+  background-color: #bfbfbf;
+  color: #716f6f;
+}
+
+.thumb {
+  position: absolute;
+  left: -webkit-calc(50% - 12px);
+  left: -moz-calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 24px;
+  height: 100%;
+  border-radius: 1px;
+  background-color: white;
+}
+
+/* @polyfill-unscoped-rule polymer-ui-toggle-button .thumb {
+  left: -webkit-calc(50% - 12px);
+} */
+    
+    /*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+.flexbox, [flexbox], [h-flexbox], [v-flexbox] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: -moz-flex !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+
+.flexbox.row, [flexbox], [h-flexbox] {
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.flexbox.column, [v-flexbox] {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex, [flex], [fit] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+::-webkit-distributed(.flex), 
+::-webkit-distributed([flex]),
+::-webkit-distributed([fit]) {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flexbox.align-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.flexbox.align-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -moz-align-items: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.flexbox.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.flexbox.justify-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flexbox.justify-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -moz-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.flexbox.justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flexbox.justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@host {
+  .flexbox, [flexbox], [h-flexbox], [v-flexbox] {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: -moz-flex !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+  }
+  
+  .flexbox.row, [flexbox], [h-flexbox] {
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  
+  .flexbox.column, [v-flexbox] {
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .flexbox.align-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -moz-align-items: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+  
+  .flexbox.align-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -moz-align-items: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  }
+  
+  .flexbox.align-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .flexbox.justify-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .flexbox.justify-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -moz-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+  
+  .flexbox.justify-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  
+  .flexbox.justify-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+    
+    </style>
+    <div id="toggle" class="toggle">
+      <span class="on-label flexbox align-center justify-center">{{currentCaption}}</span>
+      <span id="thumb" class="thumb"></span>
+      <span class="off-label flexbox align-center justify-center">{{currentCaption}}</span>
+    </div>
   </template>
+  <script type="application/dart" src="polymer_ui_toggle_button.dart"></script>
 </polymer-element>
 

@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<html>
+  <head>
+    <title>polymer-ui-toolbar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <!-- import elements-->
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_toggle_button/polymer_ui_toggle_button.html">
+    
+    <script type="application/dart"> 
+      import "packages/polymer/init.dart";
+      export "packages/polymer/init.dart";
+	</script> 
+    <script src="packages/browser/dart.js"></script>
+    
+    <!-- -->
+    <link rel="stylesheet" href="packages/polymer_ui_elements/asset/basic.css">
+    <style>
+      .wide-button {
+        width: 100px;
+      }
+    </style>
+  </head>
+   <body class="polymer-ui-body-text">
+    <polymer-ui-toggle-button></polymer-ui-toggle-button>
+    <br><br>
+    <polymer-ui-toggle-button value></polymer-ui-toggle-button>
+    <br><br>
+    <polymer-ui-toggle-button noCaption></polymer-ui-toggle-button>
+    <br><br>
+    <polymer-ui-toggle-button noCaption value></polymer-ui-toggle-button>
+    <br><br>
+    <polymer-ui-toggle-button class="wide-button" onCaption="OOOOOOON" offCaption="OFFFFFFF"></polymer-ui-toggle-button>
+  </body>
+</html>
