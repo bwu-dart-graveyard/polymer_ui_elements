@@ -3,7 +3,7 @@
 // governed by a BSD-style license that can be found in the LICENSE file.
 // This work is a port of the polymer-elements from the Polymer project, 
 // http://www.polymer-project.org/. 
-library polymer_ui_elements.polymer_ui_toolbar;
+library polymer_ui_elements.polymer_ui_toggle_button;
 
 import 'dart:math';
 import 'package:polymer/polymer.dart';

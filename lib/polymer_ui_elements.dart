@@ -35,5 +35,5 @@ export 'polymer_ui_icon_button/polymer_ui_icon_button.dart';
 // export 'polymer_ui_submenu_item/polymer_ui_submenu_item.dart';
 // export 'polymer_ui_tabs/polymer_ui_tabs.dart';
 export 'polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
-// export 'polymer_ui_toggle_button/polymer_ui_toggle_button.dart';
+export 'polymer_ui_toggle_button/polymer_ui_toggle_button.dart';
 export 'polymer_ui_toolbar/polymer_ui_toolbar.dart';
