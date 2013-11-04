@@ -17,12 +17,12 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 Element name               |   Status    | Comment
 -------------------------- | ----------- | --------
-polymer-ui-accordion       | not started |     
+polymer-ui-accordion       | ported      | has issues     
 polymer-ui-animated-pages  | not started |     
 polymer-ui-arrow           | not started |     
 polymer-ui-breadcrumbs     | not started |     
 polymer-ui-card            | not started |     
-polymer-ui-collapsible     | not started |     
+polymer-ui-collapsible     | ported      | has issues     
 polymer-ui-field           | not started |     
 polymer-ui-icon            | **ported**  |     
 polymer-ui-icon-button     | **ported**  |     
