@@ -9,7 +9,7 @@ description: >
 homepage: https://github.com/ErikGrimes/polymer_ui_elements
 documentation: http://erikgrimes.github.io/polymer_elements/docs/index.html
 environment:
-  sdk: '>=0.8.9 <0.8.11'
+  sdk: '>=0.8.10 <0.8.11'
 dependencies:
   polymer: any
   polymer_elements: any
@@ -18,7 +18,14 @@ dev_dependencies:
 transformers:
 - polymer:
     entry_points: 
-    - example/polymer_ui_arrow_demo.html
-    - example/polymer_ui_icon_button.html
-    - example/ui_arrow_example.html
+    - web/polymer_ui_arrow_demo.html
+    - web/polymer_ui_icon_button.html
+    - web/polymer_ui_toggle_button.html
+    - web/polymer_ui_toolbar.html
+    - web/ui_arrow_example.html
+#    - example/polymer_ui_arrow_demo.html
+#    - example/polymer_ui_icon_button.html
+#    - example/polymer_ui_toggle_button.html
+#    - example/polymer_ui_toolbar.html
+#    - example/ui_arrow_example.html
       
