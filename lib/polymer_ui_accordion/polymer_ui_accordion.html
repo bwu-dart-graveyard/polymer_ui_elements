@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+
+<link rel="import" href="../../../packages/polymer_elements/polymer_selector/polymer_selector.html">
+<link rel="import" href="../polymer_ui_collapsible/polymer_ui_collapsible.html">
+
+
+<polymer-element name="polymer-ui-accordion" extends="polymer-selector">
+  <template>
+    <link rel="stylesheet" href="polymer_ui_accordion.css">
+  <!-- TODO remove style tag when importing external styles is supported by dart -->
+    <style>
+    /*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    display: block;
+  }
+}
+    </style>
+    <shadow></shadow>
+  </template>
+  <script type="application/dart" src="polymer_ui_accordion.dart"></script>
+</polymer-element>
+
