@@ -10,10 +10,9 @@ http://www.polymer-project.org/.
 <html>
   <head>
     <title>polymer-ui-arrow</title>
-    <link rel="import" href="ui_arrow_example.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_arrow/polymer_ui_arrow.html">
   
     <script type='application/dart'>
-      import 'package:polymer/init.dart';
       // this export won't be needed after we fix issue 14542
       export 'package:polymer/init.dart';
     </script>
@@ -22,6 +21,12 @@ http://www.polymer-project.org/.
   </head>
 
   <body style="background: whitesmoke;">
-    <ui-arrow-example></ui-arrow-example>
+    <polymer-ui-arrow direction="up"></polymer-ui-arrow>
+    <br><br>
+    <polymer-ui-arrow direction="down" size="20" color="whitesmoke" borderWidth="8"></polymer-ui-arrow>
+    <br><br>
+    <polymer-ui-arrow direction="right" size="30" color="blue" borderColor="lightblue" borderWidth="6"></polymer-ui-arrow>
+    <br><br>
+    <polymer-ui-arrow direction="left" color="#aaa" borderColor="#aaa"></polymer-ui-arrow>
   </body>
 </html>
