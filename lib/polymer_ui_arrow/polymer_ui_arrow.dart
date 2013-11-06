@@ -110,6 +110,8 @@ class PolymerUiArrow extends PolymerElement {
   }
   
   _update() {
+    
+    _updateJob = null;
     var os = this.$['outer'].style;
     var _is = this.$['inner'].style;
     os.borderWidth = '${this.size}px';
