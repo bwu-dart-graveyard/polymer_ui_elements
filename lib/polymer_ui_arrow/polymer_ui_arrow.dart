@@ -73,7 +73,7 @@ class PolymerUiArrow extends PolymerElement {
    * Arrow border width.
    */
   @published
-  String borderWidth = '1';
+  int borderWidth = 1;
   
   var _updateJob;
   
@@ -104,12 +104,14 @@ class PolymerUiArrow extends PolymerElement {
   }
   
   asyncUpdate() {
-    if(_updateJob != null){
+    if(_updateJob == null){
       _updateJob = new Timer(Duration.ZERO,_update);
     }
   }
   
   _update() {
+    
+    _updateJob = null;
     var os = this.$['outer'].style;
     var _is = this.$['inner'].style;
     os.borderWidth = this.size + 'px';

@@ -3,13 +3,13 @@
 // governed by a BSD-style license that can be found in the LICENSE file.
 // This work is a port of the polymer-elements from the Polymer project, 
 // http://www.polymer-project.org/. 
-library polymer.elements.ui_arrow_example;
+library app_element;
 
 import 'package:polymer/polymer.dart';
 
-@CustomTag('ui-arrow-example')
-class UiArrowExample extends PolymerElement {
+@CustomTag('app-element')
+class AppElement extends PolymerElement {
   
-  UiArrowExample.created() : super.created();
+  AppElement.created() : super.created();
   
 }
