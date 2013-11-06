@@ -54,7 +54,7 @@ class PolymerUiArrow extends PolymerElement {
    * Size of the arrow.
    */
   @published
-  String size = '10';
+  num size = 10;
   
   /**
    * Color of the arrow.
@@ -73,7 +73,7 @@ class PolymerUiArrow extends PolymerElement {
    * Arrow border width.
    */
   @published
-  String borderWidth = '1';
+  num borderWidth = 1;
   
   var _updateJob;
   
@@ -104,7 +104,7 @@ class PolymerUiArrow extends PolymerElement {
   }
   
   asyncUpdate() {
-    if(_updateJob != null){
+    if(_updateJob == null){
       _updateJob = new Timer(Duration.ZERO,_update);
     }
   }
@@ -112,15 +112,15 @@ class PolymerUiArrow extends PolymerElement {
   _update() {
     var os = this.$['outer'].style;
     var _is = this.$['inner'].style;
-    os.borderWidth = this.size + 'px';
-    _is.borderWidth = this.size + 'px';
+    os.borderWidth = '${this.size}px';
+    _is.borderWidth = '${this.size}px';
     os.borderColor = 'transparent';
     _is.borderColor = 'transparent';
     var bc = 'border' + this._borders[this.direction] + 'Color';
     os.setProperty(bc, this.borderColor);
     _is.setProperty(bc, this.color);
-    _is.top = (this._tops[this.direction] * this.borderWidth).toString() + 'px';
-    _is.left = (this._lefts[this.direction] * this.borderWidth).toString() + 'px';
+    _is.top = '${(this._tops[this.direction] * this.borderWidth).toString()}px';
+    _is.left = '${(this._lefts[this.direction] * this.borderWidth).toString()}px';
   }
 
   

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!-- 
 Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
 the AUTHORS file for details. All rights reserved. Use of this source code is 
@@ -6,31 +7,32 @@ This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/. 
 -->
 
-<polymer-element name="polymer-ui-arrow"> <template>
-<style>
-@host {
-  * {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  [hidden], .hidden {
-    display: none;
-  }
-}
+<polymer-element name="polymer-ui-arrow"> 
+  <template>
+    <style>
+      @host {
+        * {
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        [hidden], .hidden {
+          display: none;
+        }
+      }
+            
+      .arrow {
+        border-color: transparent;
+        border-style: solid;
+      }
       
-.arrow {
-  border-color: transparent;
-  border-style: solid;
-}
-
-.arrow-inner {
-  position: absolute;
-}
-
-</style>
+      .arrow-inner {
+        position: absolute;
+      }
+    </style>
     <div id="outer" class="arrow arrow-outer"></div>
     <div id="inner" class="arrow arrow-inner"></div>
-</template> <script type="application/dart" src="polymer_ui_arrow.dart"></script>
+  </template> 
+  <script type="application/dart" src="polymer_ui_arrow.dart"></script>
 </polymer-element>
