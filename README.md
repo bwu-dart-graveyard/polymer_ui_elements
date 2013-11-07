@@ -16,11 +16,11 @@ The intent of the authors is to contribute the work to the Dart project itself (
 ### Status
 
 Element name               |   Status    | Comment
--------------------------- | ----------- | --------
+-------------------------- | ----------- | ----------
 polymer-ui-accordion       | ported      | has issues     
 polymer-ui-animated-pages  | not started |     
 polymer-ui-arrow           | ported      | has issues     
-polymer-ui-breadcrumbs     | not started |     
+polymer-ui-breadcrumbs     | ported      | has issues     
 polymer-ui-card            | not started |     
 polymer-ui-collapsible     | ported      | has issues     
 polymer-ui-field           | not started |     
@@ -42,7 +42,7 @@ polymer-ui-submenu-item    | not started |
 polymer-ui-tabs            | not started |
 polymer-ui-theme-aware     | **ported**  |
 polymer-ui-toggle-button   | **ported**  |
-polymer-ui-toolbar         | ported | depends on polymer-flex-layout which has issues |     
+polymer-ui-toolbar         | ported      | depends on polymer-flex-layout which has issues |     
 
 
 ### License
