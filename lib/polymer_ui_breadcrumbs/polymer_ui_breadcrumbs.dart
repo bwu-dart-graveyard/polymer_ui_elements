@@ -53,10 +53,6 @@ class PolymerUiBreadcrumbs extends PolymerElement {
   
   /**
    * Returns the model associated with the selected crumb.
-  *
-   * @attribute selectedCrumb
-   * @type object
-   * @default null
    */
   @published var selectedCrumb;
   

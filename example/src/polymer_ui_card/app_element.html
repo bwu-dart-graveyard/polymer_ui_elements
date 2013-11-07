@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../../../lib/polymer_ui_card/polymer_ui_card.html">
+
+<polymer-element name="app-element">
+  <template>
+      <style>
+      #cards {
+        margin: 0 auto;
+        background: #eee;
+        overflow: auto;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+      }
+      
+      polymer-ui-card {
+        display: block;
+        height: 200px;
+        width: 240px;
+        margin: 20px auto;
+        padding: 30px;
+      }
+    </style>
+    <div id="cards">
+      <polymer-ui-card swipeable>Swipe Me!</polymer-ui-card>
+      <polymer-ui-card swipeable>Swipe Me!</polymer-ui-card>
+      <polymer-ui-card></polymer-ui-card>
+      <polymer-ui-card swipeable>Swipe Me!</polymer-ui-card>
+      <polymer-ui-card></polymer-ui-card>
+    </div>
+  </template>
+  <script type="application/dart" src='app_element.dart'></script>
+</polymer-element>

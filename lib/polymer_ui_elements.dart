@@ -15,7 +15,7 @@ export 'polymer_ui_accordion/polymer_ui_accordion.dart';
 // export 'polymer_ui_animated_pages/polymer_ui_animated_pages.dart';
 export 'polymer_ui_arrow/polymer_ui_arrow.dart';
 export 'polymer_ui_breadcrumbs/polymer_ui_breadcrumbs.dart';
-// export 'polymer_ui_card/polymer_ui_card.dart';
+export 'polymer_ui_card/polymer_ui_card.dart';
 export 'polymer_ui_collapsible/polymer_ui_collapsible.dart';
 // export 'polymer_ui_field/polymer_ui_field.dart';
 export 'polymer_ui_icon/polymer_ui_icon.dart';
