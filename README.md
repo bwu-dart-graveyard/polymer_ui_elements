@@ -26,9 +26,9 @@ polymer-ui-collapsible     | ported      | has issues
 polymer-ui-field           | not started |     
 polymer-ui-icon            | **ported**  |     
 polymer-ui-icon-button     | **ported**  |     
-polymer-ui-menu            | not started |     
+polymer-ui-menu            | ported      | has issues     
 polymer-ui-menu-button     | not started |     
-polymer-ui-menu-item       | not started |     
+polymer-ui-menu-item       | ported      | has issues     
 polymer-ui-nav-arrow       | not started |
 polymer-ui-overlay         | not started |
 polymer-ui-pages           | not started |
@@ -38,7 +38,7 @@ polymer-ui-sidebar         | not started |
 polymer-ui-sidebar-headers | not started |
 polymer-ui-sidebar-menu    | not started |
 polymer-ui-splitter        | not started |
-polymer-ui-submenu-item    | not started |
+polymer-ui-submenu-item    | ported      | has issues
 polymer-ui-tabs            | not started |
 polymer-ui-theme-aware     | **ported**  |
 polymer-ui-toggle-button   | **ported**  |

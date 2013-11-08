@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
+<link rel="import" href="../../../packages/polymer_elements/polymer_selector/polymer_selector.html">
+
+
+<polymer-element name="polymer-ui-menu" extends="polymer-selector" attributes="theme" on-polymer-select="{{selectionChange}}">
+  <template>
+    <link rel="stylesheet" href="polymer-ui-menu.css">
+  <!-- TODO remove style tag when css import works -->
+  <style>
+  /*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    /* technical */
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* size */
+    padding: 0.4em;
+    font-weight: bold;
+  }
+
+  .polymer-ui-light-theme {
+    color: #333333;
+  }
+
+  .polymer-ui-dark-theme {
+    background: -webkit-linear-gradient(-60deg, #3d3d3d, #353535);
+    background: -moz-linear-gradient(-60deg, #3d3d3d, #353535);
+    background: -ms-linear-gradient(-60deg, #3d3d3d, #353535);
+    color: #ededed;
+  }
+}
+
+</style>
+    <shadow></shadow>
+  </template>
+  <script type="application/dart" src='polymer_ui_menu.dart'></script>
+</polymer-element>

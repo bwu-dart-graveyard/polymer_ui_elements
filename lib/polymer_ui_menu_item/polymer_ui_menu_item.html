@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_icon/polymer_ui_icon.html">
+<link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
+
+<polymer-element name="polymer-ui-menu-item" extends="polymer-ui-theme-aware" attributes="src label icon item">
+  <template>
+    <link rel="stylesheet" href="polymer-ui-menu-item.css">
+    <!-- TODO remove style tag when css import works -->
+<style>
+/*
+Copyright 2013 The Toolkitchen Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host { 
+  * {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 40px;
+    line-height: 35px;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  *:hover {
+    opacity: 0.9;
+  }
+  
+  *.polymer-selected, *[active] {
+    opacity: 1;
+  }
+  
+  .polymer-ui-light-theme.polymer-selected, .polymer-ui-light-theme[active] {
+    background: #f2f2f2;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .polymer-ui-dark-theme {
+    color: #b3b3b3;
+  }
+  
+  .polymer-ui-dark-theme:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .polymer-ui-dark-theme.polymer-selected, .polymer-ui-dark-theme[active] {
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  [active].no-active-bg {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+}
+
+/* icon and label */
+polymer-ui-icon:not([showing]) {
+  display: none !important;
+}
+
+polymer-ui-icon {
+  margin-right: 16px;
+}
+
+#label {
+  vertical-align: middle;
+  padding-right: 20px;
+}
+</style>    
+    <polymer-ui-icon src="{{src}}" icon="{{icon}}" showing?="{{isShowIcon}}"></polymer-ui-icon>
+    <span id="label">{{label}}<content></content></span>
+
+  </template>
+
+  <script type="application/dart" src='polymer_ui_menu_item.dart'></script>
+</polymer-element>

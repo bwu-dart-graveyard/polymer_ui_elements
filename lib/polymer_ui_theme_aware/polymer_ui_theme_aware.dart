@@ -8,6 +8,7 @@ library polymer_ui_elements.polymer_ui_theme_aware;
 import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:logging/logging.dart';
+import 'polymer_ui.dart' as ui;
 
 @CustomTag('polymer-ui-theme-aware')
 class PolymerUiThemeAware extends PolymerElement {
@@ -17,46 +18,27 @@ class PolymerUiThemeAware extends PolymerElement {
 
   @published String theme = '';
   
-  void validateTheme() {
-    _logger.finest('validateTheme');
+  String activeTheme = '';
+
+  ui.validateThemeFunc validateTheme = ui.validateTheme;
+  
+  @override
+  void enteredView() {
+    _logger.finest('enteredView');
     
-    if (theme == null || theme.isEmpty) {
-      var p = this;
-      while (p != null && (theme == null || theme.isEmpty)) {
-        if(p is HtmlElement) {
-          var t = p.attributes['theme'];
-          if (t != null) {
-            theme = t;
-          }
-        }
-        p = p.parent;
-      }
-    }
-    
-    if (this.theme != null && this.theme.isNotEmpty) {
-      this.activeTheme = this.theme;
-    }
+    this.validateTheme(this, theme, activeTheme);
   }
   
-    String activeTheme = '';
-
-    @override
-    void enteredView() {
-      _logger.finest('enteredView');
-      
-      this.validateTheme();
-    }
+  void themeChanged() {
+    _logger.finest('themeChanged');
     
-    void themeChanged() {
-      _logger.finest('themeChanged');
-      
-      this.activeTheme = this.theme;
-    }
+    this.activeTheme = this.theme;
+  }
+  
+  void activeThemeChanged(String old) {
+    _logger.finest('activeThemeChanged');
     
-    void activeThemeChanged(String old) {
-      _logger.finest('activeThemeChanged');
-      
-      this.classes.remove(old);
-      this.classes.add(this.activeTheme);
-    }
+    this.classes.remove(old);
+    this.classes.add(this.activeTheme);
+  }
 }

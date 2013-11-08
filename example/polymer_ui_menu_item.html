@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+
+<html>
+  <head>
+    <title>polymer-ui-menu-item</title>
+    <link rel="import" href="packages/polymer_ui_menu_item/polymer_ui_menu_item.html">
+    <link rel="stylesheet" href="packages/polymer_ui_elements/asset/basic.css">
+    
+    <script type="application/dart">
+      export 'packages/polymer/init.dart';
+    </script>
+    <script src="packages/browser/dart.js"></script>
+  
+    <style>
+      section {
+        width: 300px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body class="polymer-ui-body-text">
+    <h2>polymer-ui-light-theme</h2>
+    <section theme="polymer-ui-light-theme">
+      <polymer-ui-menu-item icon="settings" label="Settings"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="dialog" label="Dialog" active></polymer-ui-menu-item>
+    </section>
+    <h2>polymer-ui-dark-theme</h2>
+    <section class="polymer-ui-dark-bg" theme="polymer-ui-dark-theme">
+      <polymer-ui-menu-item icon="settings" label="Settings"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="dialog" label="Dialog" active></polymer-ui-menu-item>
+    </section>
+  </body>
+</html>

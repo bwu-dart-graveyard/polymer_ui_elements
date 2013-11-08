@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
+<link rel="import" href="../polymer_ui_menu_item/polymer_ui_menu_item.html">
+<link rel="import" href="../polymer_ui_menu/polymer_ui_menu.html">
+<link rel="import" href="../../../packages/polymer_elements/polymer_collapse/polymer_collapse.html">
+
+
+<polymer-element name="polymer-ui-submenu-item" extends="polymer-ui-menu-item" attributes="active selected selectedItem">
+  <template>
+    <link rel="stylesheet" href="polymer-ui-submenu-item.css">
+        <!-- TODO remove style tag when css import works -->
+    <style>
+    /*
+Copyright 2013 The Toolkitchen Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host { 
+  * {
+    display: block;
+  }
+}
+
+/* menu */
+#menu {
+  margin-left: 44px;
+  height: 0;
+  /* override @host style on polymer-ui-menu */
+  background-image: none !important;
+  padding: 0 !important;
+}
+
+
+/* !!! from collapse !!!*/
+.polymer-collapse-closed {
+  display: none;
+}
+    </style>
+    <polymer-ui-menu-item id="item" src="{{src}}" label="{{label}}" icon="{{icon}}" active?="{{active}}" on-tap="{{activate}}" on-click="{{activate}}">
+      <content select=".item-content"></content>
+    </polymer-ui-menu-item>
+    <polymer-ui-menu id="menu" selected="{{selected}}" selectedItem="{{selectedItem}}">
+      <content></content>
+    </polymer-ui-menu>
+    <polymer-collapse targetId="menu" closed="{{collapsed}}"></polymer-collapse>
+  </template>
+
+  <script type="application/dart" src='polymer_ui_submenu_item.dart'></script>
+</polymer-element>
