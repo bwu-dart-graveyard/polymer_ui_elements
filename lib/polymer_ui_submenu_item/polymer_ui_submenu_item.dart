@@ -5,10 +5,12 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_submenu_item;
 
+import 'dart:html' show Element;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published;
 import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.dart' show PolymerUiMenuItem;
-import 'package:polymer_elements/polymer_selector/polymer_selector.dart' show PolymerSelector;
+import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show PolymerUiMenu;
+//import 'package:polymer_elements/polymer_selector/polymer_selector.dart' show PolymerSelector;
 
 /**
  * polymer-ui-submenu-item is a menu-item that can contains other menu-items.
@@ -44,8 +46,8 @@ class PolymerUiSubmenuItem extends PolymerUiMenuItem {
   
   bool collapsed = true;
   
-  void get items {
-    return (this.$['menu'] as PolymerSelector).items;
+  List<Element> get items {
+    return (this.$['menu'] as PolymerUiMenu).items;
   }
   
   bool hasItems() {

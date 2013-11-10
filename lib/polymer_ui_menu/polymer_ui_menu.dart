@@ -67,6 +67,9 @@ class PolymerUiMenu extends PolymerSelector {
   String activeTheme = '';
   ui.validateThemeFunc validateTheme = ui.validateTheme;
   
+  List<Element> get items {
+    return super.items;
+  }
   void enteredView() {
     super.enteredView();
     this.validateTheme(this, this.theme, this.activeTheme);
