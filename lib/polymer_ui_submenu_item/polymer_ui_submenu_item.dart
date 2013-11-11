@@ -5,12 +5,12 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_submenu_item;
 
-import 'dart:html' show Element;
+import 'dart:async' show Stream;
+import 'dart:html' show CustomEvent, Element, EventStreamProvider;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published;
 import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.dart' show PolymerUiMenuItem;
 import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show PolymerUiMenu;
-//import 'package:polymer_elements/polymer_selector/polymer_selector.dart' show PolymerSelector;
 
 /**
  * polymer-ui-submenu-item is a menu-item that can contains other menu-items.
@@ -46,6 +46,12 @@ class PolymerUiSubmenuItem extends PolymerUiMenuItem {
   
   bool collapsed = true;
   
+  static const EventStreamProvider<CustomEvent> _polymerSelectEvent =
+      const EventStreamProvider<CustomEvent>('polymer-select');
+  
+  Stream<CustomEvent> get onPolymerSelect =>
+    PolymerUiSubmenuItem._polymerSelectEvent.forTarget(this);
+  
   List<Element> get items {
     return (this.$['menu'] as PolymerUiMenu).items;
   }
@@ -73,7 +79,7 @@ class PolymerUiSubmenuItem extends PolymerUiMenuItem {
     if (this.hasItems() && this.active) {
       this.collapsed = !this.collapsed;
       this.unselectAllItems();
-      this.fire("polymer-select", {isSelected: true, item: this});
+      dispatchEvent(new CustomEvent('polymer-select', detail: {'isSelected': true, 'item': this}));
     }
   }
   
