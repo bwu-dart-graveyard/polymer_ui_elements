@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+
+<link rel="import" href="../../../packages/polymer_elements/polymer_selector/polymer_selector.html">
+
+<polymer-element name="polymer-ui-pages" extends="polymer-selector" selected="0" notap>
+  <template>
+    <link rel="stylesheet" href="polymer_ui_breadcrumbs.css">
+    <!-- TODO remove style tag when importing external stylesheets is supported -->
+    <style>
+/*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    position: relative;
+  }
+}
+
+/*@polyfill @host > * */
+::-webkit-distributed(> *) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: -1000;
+}
+
+/*@polyfill @host > *.polymer-selected */
+::-webkit-distributed(> *.polymer-selected) {
+  visibility: visible;
+  z-index: auto;
+}
+    </style>
+      <shadow></shadow>
+  </template>
+    <script type="application/dart" src='polymer_ui_pages.dart'></script>
+  
+</polymer-element>
