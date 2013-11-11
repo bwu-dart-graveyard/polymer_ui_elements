@@ -23,7 +23,7 @@ polymer-ui-arrow           | ported      | has issues
 polymer-ui-breadcrumbs     | ported      | has issues     
 polymer-ui-card            | ported      | doesn't work due to missing pointer event support in Dart  
 polymer-ui-collapsible     | ported      | has issues     
-polymer-ui-field           | not started |     
+polymer-ui-field           | ported      | has issues     
 polymer-ui-icon            | **ported**  |     
 polymer-ui-icon-button     | **ported**  |     
 polymer-ui-menu            | ported      | has issues     

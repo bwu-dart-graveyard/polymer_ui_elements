@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+
+<html>
+  <head>
+    <title>polymer-ui-breadcrumbs</title>
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_field/polymer_ui_field.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_icon_button/polymer_ui_icon_button.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_menu_button/polymer_ui_menu_button.html">
+    
+    <script type="application/dart">
+      export 'packages/polymer/init.dart';
+    </script>
+    <script src="packages/browser/dart.js"></script>
+  
+    <style>
+      html {
+        font-family: 'Helvetica Neue', 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+      }
+      
+      polymer-ui-field {
+        border: 1px solid #ddd;
+        margin: 10px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body class="polymer-ui-body-text">
+    <polymer-ui-field>
+      <polymer-ui-icon icon="contact"></polymer-ui-icon>
+      <input placeholder="hi!" flex>
+    </polymer-ui-field>
+    <polymer-ui-field>
+      <polymer-ui-icon icon="search"></polymer-ui-icon>
+      <input placeholder="Search" flex>
+      <polymer-ui-icon icon="dialog"></polymer-ui-icon>
+    </polymer-ui-field>
+    <polymer-ui-field>
+      <polymer-ui-icon icon="plus"></polymer-ui-icon>
+      <label>I'm a label!</label>
+      <input placeholder="I have a label" flex>
+    </polymer-ui-field>
+    <polymer-ui-field>
+      <input placeholder="I have no icon" flex>
+    </polymer-ui-field>
+  </body>
+</html>
