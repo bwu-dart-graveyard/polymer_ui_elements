@@ -114,8 +114,14 @@ class PolymerUiMenuButton extends PolymerElement {
   }
   
   void parallaxAction(DeviceOrientationEvent e) {
-    var tiltLR = e.gamma.round();
-    var tiltTB = e.beta.round();
+    var tiltLR = 0;
+    if (e.gamma != null)  {
+      tiltLR = e.gamma.round();
+    } 
+    var tiltTB = 0;
+    if (e.beta != null) {
+      tiltTB = e.beta.round();
+    }
     if (this._tilt == null) {
       this._tilt = {
                    'lr': tiltLR,
