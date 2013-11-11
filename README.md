@@ -33,7 +33,7 @@ polymer-ui-nav-arrow       | ported      | has issues
 polymer-ui-overlay         | not started |
 polymer-ui-pages           | ported      | has issues with element import
 polymer-ui-ratings         | **ported**  |
-polymer-ui-scaffold        | not started |
+polymer-ui-scaffold        | ported      | has issues
 polymer-ui-sidebar         | not started |
 polymer-ui-sidebar-headers | not started |
 polymer-ui-sidebar-menu    | not started |

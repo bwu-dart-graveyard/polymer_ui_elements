@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_icon_button/polymer_ui_icon_button.html">
+<link rel="import" href="../polymer_ui_toolbar/polymer_ui_toolbar.html">
+<link rel="import" href="../../../packages/polymer_elements/polymer_grid_layout/polymer_grid_layout.html">
+
+<polymer-element name="polymer-ui-scaffold" attributes="menuActive hideMenuButton">
+  <template>
+    <link rel="stylesheet" href="polymer_ui_scaffold.css">
+    <!-- TODO remove style tag when importing external stylesheets is supported -->
+    <style>
+/*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+@host { 
+  * {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.animate {
+  -webkit-transition: left ease-in 0.2s;
+  transition: left ease-out 0.2s;
+  -webkit-transition-property: left opacity;
+  transition-property: left opacity;
+}
+
+polymer-ui-sidebar-menu {
+  width: 200px;
+}
+
+section {
+  background-color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+#scrim {
+  background-color: rgba(128, 128, 128, 0.01);
+  z-index: 10;
+}
+    </style>
+      <polymer-grid-layout id="grid"></polymer-grid-layout>
+      <section class="animate" offscreen="basement">
+        <content select="[navigation]"></content>
+      </section>
+      <polymer-ui-toolbar class="animate">
+        <polymer-ui-icon-button icon="menu" hidden?="{{hideMenuButton}}" on-tap="{{menuActionTap}}" on-click="{{menuActionTap}}" active="{{menuActive}}"></polymer-ui-icon-button> <!-- TODO remove on-click when on-tap is supported -->
+        <content select="[tool]"></content>
+      </polymer-ui-toolbar>
+      <section class="animate">
+        <content select="*"></content>
+      </section>
+    </template>
+
+  <script type="application/dart" src='polymer_ui_scaffold.dart'></script>
+</polymer-element>
