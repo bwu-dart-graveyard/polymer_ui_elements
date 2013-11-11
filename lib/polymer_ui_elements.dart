@@ -23,7 +23,7 @@ export 'package:polymer_ui_elements/polymer_ui_icon_button/polymer_ui_icon_butto
 export 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart';
 export 'package:polymer_ui_elements/polymer_ui_menu_button/polymer_ui_menu_button.dart';
 export 'package:polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.dart';
-// export 'package:polymer_ui_elements/polymer_ui_nav_arrow/polymer_ui_nav_arrow.dart';
+export 'package:polymer_ui_elements/polymer_ui_nav_arrow/polymer_ui_nav_arrow.dart';
 // export 'package:polymer_ui_elements/polymer_ui_overlay/polymer_ui_overlay.dart';
 // export 'package:polymer_ui_elements/polymer_ui_pages/polymer_ui_pages.dart';
 // export 'package:polymer_ui_elements/polymer_ui_rating/polymer_ui_rating.dart';

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_arrow/polymer_ui_arrow.html">
+
+<polymer-element name="polymer-ui-nav-arrow" extends="polymer-ui-arrow" attributes="target">
+  <template>
+    <link rel="stylesheet" href="polymer_ui_nav_arrow.css">
+    <!-- TODO remove style tag when importing external stylesheets is supported -->
+    <style>
+/*
+Copyright 2013 The Toolkitchen Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -8px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.33s;
+  }
+}
+    </style>
+    <shadow></shadow>
+  </template>
+
+  <script type="application/dart" src='polymer_ui_nav_arrow.dart'></script>
+</polymer-element>

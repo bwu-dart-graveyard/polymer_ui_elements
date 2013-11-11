@@ -29,7 +29,7 @@ polymer-ui-icon-button     | **ported**  |
 polymer-ui-menu            | ported      | has issues     
 polymer-ui-menu-button     | ported      | depends on polymer-toolbar, polymer-overlay which are not ready     
 polymer-ui-menu-item       | ported      | has issues     
-polymer-ui-nav-arrow       | not started |
+polymer-ui-nav-arrow       | ported      | has issues
 polymer-ui-overlay         | not started |
 polymer-ui-pages           | not started |
 polymer-ui-ratings         | not started |
