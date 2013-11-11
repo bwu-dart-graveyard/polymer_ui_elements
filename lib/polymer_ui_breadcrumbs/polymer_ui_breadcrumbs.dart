@@ -5,8 +5,8 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_breadcrumbs;
 
-import 'package:polymer/polymer.dart';
-import 'package:logging/logging.dart';
+import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published;
+import 'package:logging/logging.dart' show Logger;
 
 /**
  * polymer-ui-breadcrumbs shows the user where they are in relation to a
@@ -30,7 +30,7 @@ class PolymerUiBreadcrumbs extends PolymerElement {
     _logger.finest('created');
   }
 
-  final _logger = new Logger('PolymerUiBreadcrumbs');
+  final _logger = new Logger('polymer-ui-breadcrumbs');
   
   /**
    * An array of objects describing the content for breadcrumbs.
