@@ -21,13 +21,13 @@ polymer-ui-accordion       | ported      | has issues
 polymer-ui-animated-pages  | not started |     
 polymer-ui-arrow           | ported      | has issues     
 polymer-ui-breadcrumbs     | ported      | has issues     
-polymer-ui-card            | ported      | doesn't work due to missing pointer event support in Dart  
+polymer-ui-card            | ported      | depends on pointer events which are not yet available  
 polymer-ui-collapsible     | ported      | has issues     
 polymer-ui-field           | ported      | has issues     
 polymer-ui-icon            | **ported**  |     
 polymer-ui-icon-button     | **ported**  |     
 polymer-ui-menu            | ported      | has issues     
-polymer-ui-menu-button     | not started |     
+polymer-ui-menu-button     | ported      | depends on polymer-toolbar, polymer-overlay which are not ready     
 polymer-ui-menu-item       | ported      | has issues     
 polymer-ui-nav-arrow       | not started |
 polymer-ui-overlay         | not started |
@@ -42,7 +42,7 @@ polymer-ui-submenu-item    | ported      | has issues
 polymer-ui-tabs            | not started |
 polymer-ui-theme-aware     | **ported**  |
 polymer-ui-toggle-button   | **ported**  |
-polymer-ui-toolbar         | ported      | depends on polymer-flex-layout which has issues    
+polymer-ui-toolbar         | ported      | depends on polymer-flex-layout which is not yet ready    
 
 
 ### License
