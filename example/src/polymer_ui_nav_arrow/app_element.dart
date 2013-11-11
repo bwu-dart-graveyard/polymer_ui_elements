@@ -3,10 +3,8 @@
 // governed by a BSD-style license that can be found in the LICENSE file.
 // This work is a port of the polymer-elements from the Polymer project, 
 // http://www.polymer-project.org/. 
-library polymer_ui_elements.polymer_ui_nav_arrow;
+library polymer_ui_elements.polymer_ui_nav_arrow.app_element;
 
-//import 'dart:async' show Timer;
-//import 'dart:html' show document;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement;
 import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_nav_arrow/polymer_ui_nav_arrow.dart' show PolymerUiNavArrow;
