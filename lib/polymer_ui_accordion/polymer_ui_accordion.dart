@@ -38,7 +38,7 @@ class PolymerUiAccordion extends PolymerSelector {
 
   final _logger = new Logger('PolymerUiAccordion');
 
-  @published bool selected;
+  //@published bool selected;
   
   void activateHandler(e) {
     if (!e.notap) {
