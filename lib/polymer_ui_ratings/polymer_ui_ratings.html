@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
+
+<polymer-element name="polymer-ui-ratings" extends="polymer-ui-theme-aware" attributes="count value color">
+  <template>
+    <link rel="stylesheet" href="polymer_ui_ratings.css">
+    <!-- TODO remove style tag when importing external stylesheets is supported -->
+    <style>
+/*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+}
+
+#star {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  background-size: 100% 100%;
+  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_darkalt.png');
+  cursor: pointer;
+}
+
+#star.full {
+  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_darkreg.png');
+}
+
+#star.polymer-ui-dark-theme {
+  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_lightalt.png');
+}
+
+#star.full.polymer-ui-dark-theme {
+  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_lightreg.png');
+}
+
+    </style>
+    <template repeat="{{star in stars}}">
+      <span id="star" index="{{star['index']}}" class="{{star['starClass']}} {{color}} {{theme}}" on-tap="{{updateValue}}" on-click="{{updateValue}}"></span>
+    </template>
+  </template>
+
+  <script type="application/dart" src='polymer_ui_ratings.dart'></script>
+</polymer-element>

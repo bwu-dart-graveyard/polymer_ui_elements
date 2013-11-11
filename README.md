@@ -31,8 +31,8 @@ polymer-ui-menu-button     | ported      | depends on polymer-toolbar, polymer-o
 polymer-ui-menu-item       | ported      | has issues     
 polymer-ui-nav-arrow       | ported      | has issues
 polymer-ui-overlay         | not started |
-polymer-ui-pages           | not started |
-polymer-ui-ratings         | not started |
+polymer-ui-pages           | ported      | has issues with element import
+polymer-ui-ratings         | **ported**  |
 polymer-ui-scaffold        | not started |
 polymer-ui-sidebar         | not started |
 polymer-ui-sidebar-headers | not started |
