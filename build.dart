@@ -16,6 +16,7 @@ void main(args) {
                       'example/polymer_ui_nav_arrow.html',
                       'example/polymer_ui_pages.html',
                       'example/polymer_ui_rating.html',
+                      'example/polymer_ui_scaffold.html',
                       'example/polymer_ui_submenu_item.html',
                       'example/polymer_ui_toggle_button.html',
                       'example/polymer_ui_toolbar.html',
