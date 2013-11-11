@@ -5,10 +5,9 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_pages.app_element;
 
+import 'dart:html' show document;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement;
 import 'package:logging/logging.dart' show Logger;
-import 'package:polymer_ui_elements/polymer_ui_nav_arrow/polymer_ui_nav_arrow.dart' show PolymerUiNavArrow;
-import 'package:polymer_elements/polymer_selector/polymer_selector.dart' show PolymerSelector;
 
 @CustomTag('app-element')
 class AppElement extends PolymerElement {
@@ -21,11 +20,9 @@ class AppElement extends PolymerElement {
   @override
   void enteredView() {
     super.enteredView();
-    var selector = querySelector('polymer-selector') as PolymerSelector;
-    selector.onPolymerSelect.listen((e) {
-      if (e.detail.isSelected) {
-        (querySelector('polymer-ui-nav-arrow') as PolymerUiNavArrow).target = e.detail.item;
-      }
+    document.onClick.listen((e) {
+      var p = shadowRoot.querySelector('polymer-ui-pages'); 
+      p.selected = (p.selected * 1) % 5;
     });
   }
 }

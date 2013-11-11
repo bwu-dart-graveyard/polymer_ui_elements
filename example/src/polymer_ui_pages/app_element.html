@@ -10,6 +10,37 @@ http://www.polymer-project.org/.
 
 <polymer-element name="app-element">
   <template>
+      <!-- TODO remove style tag when stylesheets work as in Polymer (JS) -->
+    <style>
+/*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    position: relative;
+  }
+}
+
+/*@polyfill @host > * */
+::-webkit-distributed(> *) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: -1000;
+}
+
+/*@polyfill @host > *.polymer-selected */
+::-webkit-distributed(> *.polymer-selected) {
+  visibility: visible;
+  z-index: auto;
+}
+    </style>
     <polymer-ui-pages selected="0">
       <span>One</span>
       <span>Two</span>
