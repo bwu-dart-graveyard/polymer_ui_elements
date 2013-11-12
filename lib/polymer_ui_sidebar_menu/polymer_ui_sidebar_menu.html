@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is 
+governed by a BSD-style license that can be found in the LICENSE file. 
+This work is a port of the polymer-elements from the Polymer project, 
+http://www.polymer-project.org/. 
+-->
+<link rel="import" href="../polymer_ui_sidebar_header/polymer_ui_sidebar_header.html">
+<link rel="import" href="../polymer_ui_menu/polymer_ui_menu.html">
+<link rel="import" href="../polymer_ui_nav_arrow/polymer_ui_nav_arrow.html">
+<link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html">
+
+
+<polymer-element name="polymer-ui-breadcrumbs" attributes="crumbs selected selectedCrumb">
+  <template>
+    <link rel="stylesheet" href="polymer_ui_sidebar_menu.css">
+    <!-- TODO remove style tag when importing external stylesheets is supported -->
+    <style>
+/*
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+*/
+
+@host {
+  * {
+    padding: 0 !important;
+    box-shadow: inset -8px 0px 8px -4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .polymer-ui-light-theme {
+    box-shadow: inset -8px 0px 8px -4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.sidebar-menu {
+  position: relative;
+  padding: 0 10px;
+  margin: 10px 0;
+  overflow: auto;
+}
+
+    </style>
+    <polymer-flex-layout vertical></polymer-flex-layout>
+    <polymer-ui-sidebar-header label="{{label}}">
+      <content select="[logo]"></content>
+    </polymer-ui-sidebar-header>
+    <div class="sidebar-menu" flex>
+      <shadow></shadow>
+      <polymer-ui-nav-arrow target="{{selectedItem}}"></polymer-ui-nav-arrow>
+    </div>  
+  </template>
+</polymer-element>
