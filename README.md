@@ -34,12 +34,12 @@ polymer-ui-overlay         | not started |
 polymer-ui-pages           | ported      | has issues with element import
 polymer-ui-ratings         | **ported**  |
 polymer-ui-scaffold        | ported      | has issues
-polymer-ui-sidebar         | not started |
-polymer-ui-sidebar-headers | not started |
-polymer-ui-sidebar-menu    | not started |
-polymer-ui-splitter        | not started |
+polymer-ui-sidebar         | ported      | has issues
+polymer-ui-sidebar-headers | ported      | has issues
+polymer-ui-sidebar-menu    | ported      | has issues
+polymer-ui-splitter        | ported      | has issues
 polymer-ui-submenu-item    | ported      | has issues
-polymer-ui-tabs            | not started |
+polymer-ui-tabs            | ported      | has issues
 polymer-ui-theme-aware     | **ported**  |
 polymer-ui-toggle-button   | **ported**  |
 polymer-ui-toolbar         | ported      | depends on polymer-flex-layout which is not yet ready    

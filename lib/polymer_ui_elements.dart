@@ -30,12 +30,12 @@ export 'package:polymer_ui_elements/polymer_ui_ratings/polymer_ui_ratings.dart';
 export 'package:polymer_ui_elements/polymer_ui_scaffold/polymer_ui_scaffold.dart';
 export 'package:polymer_ui_elements/polymer_ui_scaffold/polymer_ui_scaffold2.dart';
 export 'package:polymer_ui_elements/polymer_ui_scaffold/polymer_ui_scaffold3.dart';
-// export 'package:polymer_ui_elements/polymer_ui_sidebar/polymer_ui_sidebar.dart';
-// export 'package:polymer_ui_elements/polymer_ui_sidebar_header/polymer_ui_sidebar_header.dart';
-// export 'package:polymer_ui_elements/polymer_ui_sidebar_menu/polymer_ui_sidebar_menu.dart';
-// export 'package:polymer_ui_elements/polymer_ui_splitter/polymer_ui_splitter.dart';
+// export 'package:polymer_ui_elements/polymer_ui_sidebar/polymer_ui_sidebar.dart'; // noscript
+// export 'package:polymer_ui_elements/polymer_ui_sidebar_header/polymer_ui_sidebar_header.dart'; // noscript
+// export 'package:polymer_ui_elements/polymer_ui_sidebar_menu/polymer_ui_sidebar_menu.dart'; // noscript
+export 'package:polymer_ui_elements/polymer_ui_splitter/polymer_ui_splitter.dart';
 export 'package:polymer_ui_elements/polymer_ui_submenu_item/polymer_ui_submenu_item.dart';
-// export 'package:polymer_ui_elements/polymer_ui_tabs/polymer_ui_tabs.dart';
+// export 'package:polymer_ui_elements/polymer_ui_tabs/polymer_ui_tabs.dart'; // noscript
 export 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
 export 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui.dart';
 export 'package:polymer_ui_elements/polymer_ui_toggle_button/polymer_ui_toggle_button.dart';
