@@ -89,7 +89,7 @@ class PolymerUiMenuButton extends PolymerElement {
   Map<String, int> _tilt;
   
   void openedChanged(oldValue) {
-    new Timer(new Duration(milliseconds: 0), () {
+    new Timer(Duration.ZERO, () {
       this._isParallaxActionRunning = true;
       // TODO (this.$['arrowPositionHelper'] as PolymerAnchorPoint).apply();
       this.$['arrowPositionHelper'].apply();
