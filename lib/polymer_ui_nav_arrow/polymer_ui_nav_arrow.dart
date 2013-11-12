@@ -58,7 +58,7 @@ class PolymerUiNavArrow extends PolymerUiArrow {
   void targetChanged() {
     this._show = (this.target != null);
     if (this.target != null) {
-      new Timer(new Duration(milliseconds: 0), () => move());
+      new Timer(Duration.ZERO, () => move());
     }
   }
   
