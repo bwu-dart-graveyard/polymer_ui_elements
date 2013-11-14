@@ -20,13 +20,13 @@ class PolymerUiThemeAware extends PolymerElement {
   
   String activeTheme = '';
 
-  ui.validateThemeFunc validateTheme = ui.validateTheme;
+  //ui.validateThemeFunc validateTheme = ui.validateTheme;
   
   @override
   void enteredView() {
     _logger.finest('enteredView');
     
-    this.validateTheme(this, theme, activeTheme);
+    ui.validateTheme(this, theme, activeTheme);
   }
   
   void themeChanged() {
