@@ -118,7 +118,7 @@ class PolymerUiArrow extends PolymerElement {
     _is.borderWidth = '${this.size}px';
     os.borderColor = 'transparent';
     _is.borderColor = 'transparent';
-    var bc = 'border' + this._borders[this.direction] + 'Color';
+    var bc = 'border-' + this._borders[this.direction] + '-color';
     os.setProperty(bc, this.borderColor);
     _is.setProperty(bc, this.color);
     _is.top = '${(this._tops[this.direction] * this.borderWidth).toString()}px';
