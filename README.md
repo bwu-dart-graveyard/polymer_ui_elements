@@ -19,7 +19,7 @@ Element name               |   Status    | Comment
 -------------------------- | ----------- | ----------
 polymer-ui-accordion       | ported      | has issues     
 polymer-ui-animated-pages  | not started |     
-polymer-ui-arrow           | ported      | has issues     
+polymer-ui-arrow           | ported      | needs tests     
 polymer-ui-breadcrumbs     | ported      | has issues     
 polymer-ui-card            | ported      | depends on pointer events which are not yet available  
 polymer-ui-collapsible     | ported      | has issues     
