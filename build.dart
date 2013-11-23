@@ -1,7 +1,7 @@
 import 'package:polymer/builder.dart';
 
 void main(args) {
-  build(entryPoints: ['example/polymer_ui_accordion.html',
+  lint(entryPoints: ['example/polymer_ui_accordion.html',
                       'example/polymer_ui_arrow.html',
                       'example/polymer_ui_breadcrumbs.html',
                       'example/polymer_ui_card.html',
