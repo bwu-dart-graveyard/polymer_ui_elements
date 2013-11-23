@@ -10,8 +10,8 @@ import 'dart:html' show DeviceOrientationEvent, Element, window;
 import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published;
 import 'package:logging/logging.dart' show Logger;
 
-import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show PolymerUiMenu;
-import 'package:polymer_elements/polymer_anchor_point/polymer_anchor_point.dart' show PolymerAnchorPoint;
+//import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show PolymerUiMenu;
+//import 'package:polymer_elements/polymer_anchor_point/polymer_anchor_point.dart' show PolymerAnchorPoint;
 
 /**
  * polymer-ui-menu-button is a polymer-ui-icon-button with a drop down menu
