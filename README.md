@@ -17,7 +17,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 Element name               |   Status    | Comment
 -------------------------- | ----------- | ----------
-polymer-ui-accordion       | ported      | has issues     
+polymer-ui-accordion       | ported      | needs tests     
 polymer-ui-animated-pages  | not started |     
 polymer-ui-arrow           | ported      | needs tests     
 polymer-ui-breadcrumbs     | ported      | has issues     
