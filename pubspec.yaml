@@ -11,8 +11,9 @@ documentation: http://erikgrimes.github.io/polymer_elements/docs/index.html
 environment:
   sdk: ">=0.8.10+6 <2.0.0"
 dependencies:
-  polymer:  ">=0.9.0 < 0.10.0"
-  polymer_elements: any
+  polymer:  ">=0.9.1 < 0.10.0"
+  polymer_elements: 
+    git: https://github.com/ErikGrimes/polymer_elements.git
 dev_dependencies:
   unittest:  ">=0.9.0 < 0.10.0"
 
