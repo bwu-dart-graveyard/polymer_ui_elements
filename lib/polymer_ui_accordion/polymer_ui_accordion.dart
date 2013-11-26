@@ -5,8 +5,8 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_accordion;
 
+import 'dart:html';
 import 'package:polymer/polymer.dart';
-import 'package:logging/logging.dart';
 import 'package:polymer_elements/polymer_selector/polymer_selector.dart';
 
 /**
@@ -36,13 +36,15 @@ import 'package:polymer_elements/polymer_selector/polymer_selector.dart';
 class PolymerUiAccordion extends PolymerSelector {
   PolymerUiAccordion.created() : super.created();
 
-  final _logger = new Logger('PolymerUiAccordion');
-
-  //@published bool selected;
   
   void activateHandler(e) {
+    //TODO Uncomment when notap is supported
+    /*
     if (!e.notap) {
       super.activateHandler(e);
     }
+    */
+    super.activateHandler(e);
   }
+  
 }

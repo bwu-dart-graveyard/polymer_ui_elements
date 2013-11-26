@@ -6,14 +6,11 @@
 library polymer_ui_elements.polymer_ui_collapsible;
 
 import 'package:polymer/polymer.dart';
-import 'package:logging/logging.dart';
 
-@CustomTag('polymer-ui-accordion')
+@CustomTag('polymer-ui-collapsible')
 class PolymerUiCollapsible extends PolymerElement {
   PolymerUiCollapsible.created() : super.created();
 
-  final _logger = new Logger('PolymerUiCollapsible');
-  
   /**
    * If true, tapping on the header will not toggle the active state.
    */
