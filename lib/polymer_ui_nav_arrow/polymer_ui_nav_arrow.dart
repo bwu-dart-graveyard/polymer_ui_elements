@@ -7,7 +7,10 @@ library polymer_ui_elements.polymer_ui_nav_arrow;
 
 import 'dart:async' show Timer;
 import 'dart:html' show Element;
-import 'package:polymer/polymer.dart' show CustomTag, published;
+import 'package:polymer/polymer.dart' show CustomTag, published,
+ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
+// https://code.google.com/p/dart/issues/detail?id=13849
+// (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_arrow/polymer_ui_arrow.dart' show PolymerUiArrow;
 

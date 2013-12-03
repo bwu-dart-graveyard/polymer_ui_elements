@@ -8,7 +8,10 @@ library polymer_ui_elements.polymer_ui_card;
 import 'dart:async' show Stream, StreamSubscription;
 import 'dart:html' show CssStyleDeclaration, CustomEvent, EventStreamProvider ,HtmlElement;
 import 'dart:math' show max, sqrt;
-import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published;
+import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
+ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
+// https://code.google.com/p/dart/issues/detail?id=13849
+// (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
 
 /**
