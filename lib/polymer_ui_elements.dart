@@ -16,10 +16,15 @@ export 'package:polymer_ui_elements/polymer_ui_accordion/polymer_ui_accordion.da
 export 'package:polymer_ui_elements/polymer_ui_arrow/polymer_ui_arrow.dart';
 export 'package:polymer_ui_elements/polymer_ui_breadcrumbs/polymer_ui_breadcrumbs.dart';
 export 'package:polymer_ui_elements/polymer_ui_card/polymer_ui_card.dart';
+//export 'package:polymer_ui_elements/polymer_ui_card/polymer_ui_clock.dart';
 export 'package:polymer_ui_elements/polymer_ui_collapsible/polymer_ui_collapsible.dart';
+//export 'package:polymer_ui_elements/polymer_ui_collapsible/polymer_ui_dark_theme.dart';
 //export 'package:polymer_ui_elements/polymer_ui_field/polymer_ui_field.dart'; // noscript
 export 'package:polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.dart';
 export 'package:polymer_ui_elements/polymer_ui_icon_button/polymer_ui_icon_button.dart';
+//export 'package:polymer_ui_elements/polymer_ui_icon_button/polymer_ui_icon_set.dart';
+//export 'package:polymer_ui_elements/polymer_ui_icon_button/polymer_ui_light_theme.dart';
+//export 'package:polymer_ui_elements/polymer_ui_icon_button/polymer_ui_line_chart.dart';
 export 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart';
 export 'package:polymer_ui_elements/polymer_ui_menu_button/polymer_ui_menu_button.dart';
 export 'package:polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.dart';
@@ -34,9 +39,12 @@ export 'package:polymer_ui_elements/polymer_ui_scaffold/polymer_ui_scaffold3.dar
 // export 'package:polymer_ui_elements/polymer_ui_sidebar_header/polymer_ui_sidebar_header.dart'; // noscript
 // export 'package:polymer_ui_elements/polymer_ui_sidebar_menu/polymer_ui_sidebar_menu.dart'; // noscript
 export 'package:polymer_ui_elements/polymer_ui_splitter/polymer_ui_splitter.dart';
+//export 'package:polymer_ui_elements/polymer_ui_splitter/polymer_ui_stock.dart';
 export 'package:polymer_ui_elements/polymer_ui_submenu_item/polymer_ui_submenu_item.dart';
 // export 'package:polymer_ui_elements/polymer_ui_tabs/polymer_ui_tabs.dart'; // noscript
 export 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
-export 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui.dart';
 export 'package:polymer_ui_elements/polymer_ui_toggle_button/polymer_ui_toggle_button.dart';
 export 'package:polymer_ui_elements/polymer_ui_toolbar/polymer_ui_toolbar.dart';
+//export 'package:polymer_ui_elements/polymer_ui_toolbar/polymer_ui_weather.dart';
+
+export 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui.dart';
