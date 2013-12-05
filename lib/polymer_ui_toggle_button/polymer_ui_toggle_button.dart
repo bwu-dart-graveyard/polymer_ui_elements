@@ -107,7 +107,7 @@ class PolymerUiToggleButton extends PolymerElement {
     this.$['toggle'].style.left = '${this._x}px';
   }
   
-  void trackEnd() {
+  void trackEnd(e) {
     this.$['toggle'].style.left = null;
     this.$['toggle'].classes.remove('dragging');
     this.value = (this._x).abs() < this._w / 2;
