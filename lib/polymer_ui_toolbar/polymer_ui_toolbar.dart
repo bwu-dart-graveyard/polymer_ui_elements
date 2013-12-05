@@ -5,8 +5,12 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_toolbar;
 
-import 'package:polymer/polymer.dart';
-import 'package:logging/logging.dart';
+import 'dart:html' show Event, Node;
+import 'package:polymer/polymer.dart' show CustomTag, observable, published,
+ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
+// https://code.google.com/p/dart/issues/detail?id=13849
+// (https://code.google.com/p/dart/issues/detail?id=15095)
+import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
 
 /**
@@ -47,5 +51,28 @@ class PolymerUiToolbar extends PolymerUiThemeAware{
 
   void queryMatchesChanged(oldValue) {
     this.classes.toggle('narrow-layout', this.queryMatches);
+  }
+  
+  // child notifies with this event, that we should add 'flexbox' to class
+  void onPolymerClassChange(Event e, var details, Node node) {
+    if(details is Map) {
+      details.forEach((String k, String v) {
+        switch(k) {
+          case 'add':
+            this.classes.add(v);
+            break;
+            
+          case 'remove':
+            this.classes.remove(v);
+            break;
+            
+          case 'toggle':
+            this.classes.toggle(v);
+            break;
+        }
+      });
+    }
+  
+    e.stopImmediatePropagation();
   }
 }

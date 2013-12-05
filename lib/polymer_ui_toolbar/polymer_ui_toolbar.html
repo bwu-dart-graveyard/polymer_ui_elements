@@ -6,12 +6,15 @@ This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/. 
 -->
 <link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html">
+<link rel="import" href="../../../packages/polymer_elements/polymer_media_query/polymer_media_query.html">
 <link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
 
-<polymer-element name="polymer-ui-toolbar" extends="polymer-ui-theme-aware" attributes="responsiveWidth">
+<polymer-element name="polymer-ui-toolbar" extends="polymer-ui-theme-aware" attributes="responsiveWidth" on-polymer-class-change="{{onPolymerClassChange}}">
   <template>
     <link rel="stylesheet" href="polymer_ui_toolbar.css">
-    <!-- TODO remove style element when style import works -->
+    <!-- TODO this stylesheet link should not be necessary -->
+    <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.css">
+    <!-- remove style tag below when new selectors (:host) are supported by Dartium -->
     <style>
     /*
 Copyright 2013 The Polymer Authors. All rights reserved.
@@ -80,10 +83,10 @@ content::-webkit-distributed(> polymer-ui-toolbar:not(.narrow-layout)) {
   border: 0;
   background: transparent none;
 }
-    
     </style>
     <polymer-flex-layout align="center"></polymer-flex-layout>
-    <!-- TODO <polymer-media-query query="max-width: {{responsiveWidth}}" queryMatches="{{queryMatches}}"></polymer-media-query> -->
+    <polymer-media-query query="max-width: {{responsiveWidth}}" queryMatches="{{queryMatches}}"></polymer-media-query>
+    <shadow></shadow>
     <content></content>
   </template>
   <script type="application/dart" src='polymer_ui_toolbar.dart'></script>
