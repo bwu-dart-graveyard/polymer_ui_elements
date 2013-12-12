@@ -8,60 +8,23 @@ http://www.polymer-project.org/.
 -->
 <link rel="import" href="../polymer_ui_icon_button/polymer_ui_icon_button.html">
 <link rel="import" href="../polymer_ui_toolbar/polymer_ui_toolbar.html">
-<!-- <link rel="import" href="../../../packages/polymer_elements/polymer_grid_layout/polymer_grid_layout.html"> -->
+<link rel="import" href="../../../packages/polymer_elements/polymer_grid_layout/polymer_grid_layout.html">
 
 <polymer-element name="polymer-ui-scaffold3" attributes="menuActive hideMenuButton">
   <template>
     <link rel="stylesheet" href="polymer_ui_scaffold.css">
-    <!-- TODO remove style tag when importing external stylesheets is supported -->
-    <style>
-/*
-Copyright 2013 The Polymer Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
-@host { 
-  * {
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-}
+    <link rel="stylesheet" href="polymer_ui_scaffold_old.css"> <!-- TODO remove -->
 
-.animate {
-  -webkit-transition: left ease-in 0.2s;
-  transition: left ease-out 0.2s;
-  -webkit-transition-property: left opacity;
-  transition-property: left opacity;
-}
-
-polymer-ui-sidebar-menu {
-  width: 200px;
-}
-
-section {
-  background-color: white;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-#scrim {
-  background-color: rgba(128, 128, 128, 0.01);
-  z-index: 10;
-}
-    </style>
-    <link rel="stylesheet" href="polymer-ui-scaffold.css">
     <polymer-grid-layout id="grid"></polymer-grid-layout>
-    <section class="animate" offscreen="basement">
+    <section class="animate" style="z-index: 10;" offscreen="left">
       <content select="[navigation]"></content>
     </section>
-    <polymer-ui-toolbar class="animate">
-      <polymer-ui-icon-button icon="menu" hidden?="{{hideMenuButton}}" on-tap="{{menuActionTap}}" active="{{menuActive}}"></polymer-ui-icon-button>
+    <section id="scrim" on-tap="{{menuActionTap}}" on-click="{{menuActionTap}}" offscreen="right"></section> <!-- remove on-click once on-tap is supported -->
+    <polymer-ui-toolbar offscreen="basement">
+      <polymer-ui-icon-button icon="menu" hidden?="{{hideMenuButton}}" on-tap="{{menuActionTap}}" on-click="{{menuActionTap}}" active="{{menuActive}}"></polymer-ui-icon-button> <!-- remove on-click once on-tap is supported -->
       <content select="[tool]"></content>
     </polymer-ui-toolbar>
-    <section class="animate">
+    <section offscreen="basement">
       <content select="*"></content>
     </section>
   </template>
