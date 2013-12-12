@@ -18,7 +18,7 @@ class AppElement extends PolymerElement {
   AppElement.created() : super.created();
   
   enteredView(){
+    super.enteredView();
     icons = document.createElement('polymer-ui-icon').icons.keys.toList();
   }
-  
 }

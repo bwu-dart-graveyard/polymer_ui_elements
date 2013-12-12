@@ -5,6 +5,7 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_icon;
 
+import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:logging/logging.dart';
 import 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
@@ -52,8 +53,8 @@ class PolymerUiIcon extends PolymerUiThemeAware {
    */
   @published String icon = '';
   
-  int bx = 0;
-  int by = 0;
+  int _bx = 0;
+  int _by = 0;
 
   // memoize offset because getComputedStyle is expensive
   var themes = {};
@@ -143,7 +144,7 @@ class PolymerUiIcon extends PolymerUiThemeAware {
     _logger.finest('indexChanged');
     
     this.classes.add('polymer-ui-icons');
-    this.by = -this.size * this.index;
+    this._by = -this.size * this.index;
     this.updateIcon();
   }
   
@@ -160,7 +161,7 @@ class PolymerUiIcon extends PolymerUiThemeAware {
     
     super.activeThemeChanged(old);
     this.style.backgroundPosition = '';
-    this.bx = calcThemeOffset(this.activeTheme, this);
+    this._bx = calcThemeOffset(this.activeTheme, this);
     this.updateIcon();
   }
   
@@ -170,18 +171,23 @@ class PolymerUiIcon extends PolymerUiThemeAware {
     
     if (this.src != null && this.src.isNotEmpty) {
       this.style.backgroundPosition = 'center';
+      this.style.backgroundSize = '${this.size}px ${this.size}px';
     } else {
-      this.style.backgroundPosition = '${this.bx}px ${this.by}px';
+      this.style.backgroundPosition = '${this._bx}px ${this._by}px';
     }
   }
 
-  int calcThemeOffset(theme, node) {
+  int calcThemeOffset(String theme, Element node) {
     _logger.finest('calcThemeOffset');
     
     if (themes[theme] == null) {
-      var bg = getComputedStyle(node).backgroundPosition.split(' ');
-      bg.removeAt(0);
-      var offset = double.parse(bg[0]); // parseFloat(
+      var bp = node.getComputedStyle().backgroundPosition.split(' ');
+      // support 4 value syntax (https://code.google.com/p/chromium/issues/detail?id=310977)
+      // bg.removeAt(0);
+      var l = bp.length == 4 ? bp[1] : bp[0];
+      
+      var offset = num.parse(new RegExp(r'^[-+\d,\.]*').firstMatch(l).group(0));
+      
       _logger.finest('calcThemeOffset - theme: ${theme}; offset: ${offset}');
       themes[theme] = offset;
     }

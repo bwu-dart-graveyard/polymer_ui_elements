@@ -11,36 +11,12 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-icon" extends="polymer-ui-theme-aware" attributes="src size index icon">
   <template>
     <link rel="stylesheet" href="polymer_ui_icon.css"> 
+    <link rel="stylesheet" href="polymer_ui_icon_old.css"> <!-- TODO remove -->
     <!-- TODO remove style element and content when css import is fixed -->
-    <style>
-/*
-Copyright 2013 The Polymer Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
-@host {
-  * {
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-    background-repeat: no-repeat;
-  }
 
-  .polymer-ui-dark-icon, .polymer-ui-light-theme {
-    background-position: -24px 0;
-  }
-
-  .polymer-ui-light-icon, .polymer-ui-dark-theme {
-    background-position: -24px 0;
-  }
-
-  .polymer-ui-icons {
-    background-image: url(packages/polymer_ui_elements/polymer_ui_icon/action_icons.png);
-  }
-}    
-    </style>
     <content></content>
   </template>
 
   <script type="application/dart" src='polymer_ui_icon.dart'></script>
 </polymer-element>
+
