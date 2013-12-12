@@ -10,29 +10,7 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-arrow"> 
   <template>
     <link rel="stylesheet" href="polymer_ui_arrow.css">
-    <!-- TODO remove style element when Dart supports external style files -->
-    <style>
-      @host {
-        * {
-          display: inline-block;
-          position: relative;
-          overflow: hidden;
-        }
-        
-        [hidden], .hidden {
-          display: none;
-        }
-      }
-            
-      .arrow {
-        border-color: transparent;
-        border-style: solid;
-      }
-      
-      .arrow-inner {
-        position: absolute;
-      }
-    </style>
+    <link rel="stylesheet" href="polymer_ui_arrow_old.css"> <!-- Dartium still needs the old selectors -->
     <div id="outer" class="arrow arrow-outer"></div>
     <div id="inner" class="arrow arrow-inner"></div>
   </template> 

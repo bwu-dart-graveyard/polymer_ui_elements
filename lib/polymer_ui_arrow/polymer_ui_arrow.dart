@@ -105,12 +105,11 @@ class PolymerUiArrow extends PolymerElement {
   
   asyncUpdate() {
     if(_updateJob == null){
-      _updateJob = new Timer(Duration.ZERO,_update);
+      _updateJob = Timer.run(_update);
     }
   }
   
   _update() {
-    
     _updateJob = null;
     var os = this.$['outer'].style;
     var _is = this.$['inner'].style;
@@ -118,12 +117,10 @@ class PolymerUiArrow extends PolymerElement {
     _is.borderWidth = '${this.size}px';
     os.borderColor = 'transparent';
     _is.borderColor = 'transparent';
-    var bc = 'border-' + this._borders[this.direction] + '-color';
+    var bc = 'border-' + this._borders[this.direction] + '-Color';
     os.setProperty(bc, this.borderColor);
     _is.setProperty(bc, this.color);
     _is.top = '${(this._tops[this.direction] * this.borderWidth).toString()}px';
     _is.left = '${(this._lefts[this.direction] * this.borderWidth).toString()}px';
   }
-
-  
 }
