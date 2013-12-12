@@ -5,7 +5,7 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_accordion;
 
-import 'dart:html';
+//import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:polymer_elements/polymer_selector/polymer_selector.dart';
 
