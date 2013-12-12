@@ -11,9 +11,10 @@ The intent of the authors is to contribute the work to the Dart project itself (
 * [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
     
     We were not yet able to build a JavaScript version for the demo pages of the polymer_ui_elements.
-    The high number of entry pages leads to *out of memory* errors with pub build. 
-    The demo pages linked below are from an earlier build and have been improved a lot since then.
-    A normal project has a different structure that probably doesn't lead to this kind of error. 
+    The high number of entry pages (examples) in this library leads to *out of memory* errors with pub build. 
+    Just using the polymer_ui_elements in your app won't lead to this kind of error.
+    
+    The demo pages linked below are from an earlier build and have been improved a lot since then. 
 
 The source code of these demo pages can be found in the [example subdirectory of the package](https://github.com/ErikGrimes/polymer_ui_elements/tree/master/example). 
 The actual implementation of the demo page is often outsourced to files in the `examples/src/element_name` subdirectory.
