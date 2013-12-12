@@ -6,7 +6,7 @@
 library polymer_ui_elements.polymer_ui_menu;
 
 import 'dart:html';
-import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
+import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
@@ -67,15 +67,14 @@ class PolymerUiMenu extends PolymerSelector {
   
   @published String theme = '';
   
-  String activeTheme = '';
-  ui.validateThemeFunc validateTheme = ui.validateTheme;
+  @observable String activeTheme = '';
   
   List<Element> get items {
     return super.items;
   }
   void enteredView() {
     super.enteredView();
-    this.validateTheme(this, this.theme, this.activeTheme);
+    this.activeTheme = ui.validateTheme(this, theme: this.theme, activeTheme: this.activeTheme, defaultTheme: '');
   }
   
   void themeChanged() {
@@ -89,10 +88,10 @@ class PolymerUiMenu extends PolymerSelector {
   
   void selectionChange(e, Map<String, dynamic> detail) {
     if (detail['isSelected'] as bool) {
-      var i = detail['item']; // TODO zoechi what type detail['item'] 
+      var i = detail['item'];  
       // find nested selected item
-      while (i.selectedItem != null) {
-        i = i.selectedItem;
+      while (i.attributes['selectedItem'] != null) {
+        i = i.attributes['selectedItem'];
       }
       this.selectedItem = i;
     }

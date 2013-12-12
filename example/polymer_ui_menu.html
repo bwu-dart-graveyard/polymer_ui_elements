@@ -57,5 +57,17 @@ http://www.polymer-project.org/.
         <polymer-ui-menu-item label="Favorites 3"></polymer-ui-menu-item>
       </polymer-ui-submenu-item>
     </polymer-ui-menu>
+    <h2>links (via href)</h2>
+    <polymer-ui-menu selected="0" theme="polymer-ui-light-theme">
+      <polymer-ui-menu-item icon="settings" label="Settings" href="#settings"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="dialog" label="Dialog" href="#dialog"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="search" label="Search" href="#search"></polymer-ui-menu-item>
+    </polymer-ui-menu>
+    <h2>links (via &lt;a&gt;)</h2>
+    <polymer-ui-menu selected="0" theme="polymer-ui-light-theme">
+      <polymer-ui-menu-item icon="settings" label="Settings"><a href="#settings" target="_self"></a></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="dialog" label="Dialog"><a href="#dialog" target="_self"></a></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="search" label="Search"><a href="#search" target="_self"></a></polymer-ui-menu-item>
+    </polymer-ui-menu>
   </body>
 </html>
