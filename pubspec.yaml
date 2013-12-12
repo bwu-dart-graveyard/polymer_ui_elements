@@ -1,5 +1,5 @@
 name: polymer_ui_elements
-version: 0.1.0
+version: 0.1.1
 authors: 
 - Erik Grimes <erik.grimes@gmail.com>
 - Günter Zöchbauer <guenter@gzoechbauer.com>
@@ -12,7 +12,7 @@ environment:
   sdk: ">=1.0.0 <2.0.0"
 dependencies:
   polymer:  ">=0.9.2+3 <0.10.0"
-  polymer_elements: ">=0.1.0 <0.2.0"
+  polymer_elements: ">=0.1.1 <0.2.0"
 #dependency_overrides:
 #  polymer_elements:  
 #    path: ../polymer_elements  
