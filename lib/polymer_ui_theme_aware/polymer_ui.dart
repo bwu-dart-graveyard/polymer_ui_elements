@@ -2,17 +2,17 @@ library polymer_ui_elements.polymer_ui_theme_aware.polymer_ui;
 
 import 'dart:html' show HtmlElement;
 
-typedef validateThemeFunc(HtmlElement element, String theme, String activeTheme);
+typedef validateThemeFunc(HtmlElement element, {String theme, String activeTheme, String defaultTheme});
 
-void validateTheme(HtmlElement element, String theme, String activeTheme) {
-  
+String validateTheme(HtmlElement element, {String theme, String activeTheme, String defaultTheme}) {
+  var newTheme = theme;  
   if (theme == null || theme.isEmpty) {
     var p = element;
-    while (p != null && (theme == null || theme.isEmpty)) {
+    while (p != null && (newTheme == null || newTheme.isEmpty)) {
       if(p is HtmlElement) {
         var t = p.attributes['theme'];
         if (t != null) {
-          theme = t;
+          newTheme = t;
         }
       }
       p = p.parent;
@@ -20,6 +20,9 @@ void validateTheme(HtmlElement element, String theme, String activeTheme) {
   }
   
   if (theme != null && theme.isNotEmpty) {
-    activeTheme = theme;
+    return theme;
+  } else if (newTheme != null && newTheme.isNotEmpty){
+    return newTheme;
   }
+  return defaultTheme;
 }

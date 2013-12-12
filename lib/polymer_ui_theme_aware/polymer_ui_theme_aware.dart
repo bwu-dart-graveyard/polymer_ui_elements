@@ -18,15 +18,15 @@ class PolymerUiThemeAware extends PolymerElement {
 
   @published String theme = '';
   
-  String activeTheme = '';
+  @observable String activeTheme = '';
+  String defaultTheme = '';
 
-  //ui.validateThemeFunc validateTheme = ui.validateTheme;
-  
   @override
   void enteredView() {
     _logger.finest('enteredView');
+    super.enteredView();
     
-    ui.validateTheme(this, theme, activeTheme);
+    activeTheme = ui.validateTheme(this, theme: theme, activeTheme: activeTheme, defaultTheme: defaultTheme);
   }
   
   void themeChanged() {
