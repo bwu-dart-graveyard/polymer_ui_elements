@@ -10,7 +10,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
 * The Dart source files of an element often contains some documentation (Dartdoc) how to use the element. You can find the documentation online at  
 * [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
     
-    We were not yet able to build a JavaScript version for the demo pages of the polymer_ui_elements.
+    We were not able to build JavaScript versions of the demo pages for polymer_ui_elements.
     The high number of entry pages (examples) in this library leads to *out of memory* errors with pub build. 
     Just using the polymer_ui_elements in your app won't lead to this kind of error.
     
