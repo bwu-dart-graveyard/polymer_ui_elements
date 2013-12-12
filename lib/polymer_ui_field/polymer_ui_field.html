@@ -8,41 +8,13 @@ http://www.polymer-project.org/.
 -->
 <link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html">
 
-<polymer-element name="polymer-ui-field" noscript>
+<polymer-element name="polymer-ui-field" on-polymer-class-change="{{onPolymerClassChange}}">
   <template>
-    <style>
-      @host {
-        * {
-          display: block;
-          /* border-bottom: 1px solid rgba(0, 0, 0, 0.15); */
-          color: #333;
-          font-size: 14px;
-        }
-      }
-      /*@polyfill @host > polymer-ui-icon*/
-      ::-webkit-distributed(> polymer-ui-icon) {
-        margin: 8px;
-      }
-      /*@polyfill @host input*/
-      ::-webkit-distributed(input) {
-        display: block;
-        background: transparent;
-        border: 0;
-        padding: 0;
-        margin: 0 4px;
-        color: #333;
-        font-size: 14px;
-      }
-      /*@polyfill @host input:focus*/
-      ::-webkit-distributed(input:focus) {
-        outline: none;
-      }
-      /*@polyfill @host input::placeholder*/
-      ::-webkit-distributed(input::placeholder) {
-        color: #b3b3b3;
-      }
-    </style>
+    <link rel="stylesheet" href="polymer_ui_field_old.css"> <!-- TODO remove -->
+    <link rel="stylesheet" href="polymer_ui_field.css">
+  
     <polymer-flex-layout align="center"></polymer-flex-layout>
     <content select="*"></content>
   </template>
+  <script type="application/dart" src="polymer_ui_field.dart"></script>
 </polymer-element>
