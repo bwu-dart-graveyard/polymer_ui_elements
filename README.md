@@ -7,11 +7,38 @@ The intent of the authors is to contribute the work to the Dart project itself (
 * [polymer_elements](https://github.com/ErikGrimes/polymer_elements)
 
 ## Documentation
+* The Dart source files of an element often contains some documentation (Dartdoc) how to use the element. You can find the documentation online at  
 * [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
+    
+    We were not yet able to build a JavaScript version of the demo pages of the polymer_ui_elements.
+    The high number of entry pages leads to *out of memory* errors with pub build. 
+
+The source code of these demo pages can be found in the [example subdirectory of the package](https://github.com/ErikGrimes/polymer_ui_elements/tree/master/example). 
+The actual implementation of the demo page is often outsourced to files in the `examples/src/element_name` subdirectory.
+
+## Usage
+* add the following to your pubspec.yaml file: 
+
+```yaml
+dependencies:
+  polymer_ui_elements:
+```
+
+* to import a polymer_ui_element into your entry page HTML file, add the following line inside the `<head>` tag before any of the Dart and polymer `<script>` tags: 
+  
+```html  
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_accordion/polymer_ui_accordion.html">
+```
+
+* to import a polymer_ui_element into any of your custom polymer elements, add the following line into your Polymer element HTML file before the `<polymer-element name="my-element">` start tag:
+  
+```html
+    <link rel="import" href="../../../packages/polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.html">
+```
 
 ## General notes
 
-* Current development status requires Dart SDK Dart version 1.0.0_r30338 (DEV)
+* Current development status requires Dart SDK Dart version 1.0.3.0_r30939 (DEV)
 
 ### Status
 
