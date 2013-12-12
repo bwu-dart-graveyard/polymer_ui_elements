@@ -58,9 +58,4 @@ class PolymerUiBreadcrumbs extends PolymerElement {
    * Returns the model associated with the selected crumb.
    */
   @published var selectedCrumb;
-  
-  @override
-  void enteredView() {
-    super.enteredView();
-  }
 }

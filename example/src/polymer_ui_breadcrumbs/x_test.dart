@@ -5,7 +5,7 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.x_test;
 
-import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
+import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
@@ -29,6 +29,11 @@ class XTest extends PolymerElement {
                             ];
   @published int selected;
   @published var selectedCrumb;
+  @observable String selectedLabel;
   // Filters and transformers can be referenced as fields.
   final Transformer asInteger = new StringToInt();
+  
+  void selectedChanged(old) {
+    selectedLabel = crumbs[selected]['label'];
+  }
 }
