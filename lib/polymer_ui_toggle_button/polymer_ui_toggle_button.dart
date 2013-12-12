@@ -56,11 +56,11 @@ class PolymerUiToggleButton extends PolymerElement {
   int _w;
   int _x;
   
-  @override 
-  void enteredView() {
+  void ready() {
+    super.ready();
     updateCaption();
-    super.enteredView();
   }
+  
   void toggle() {
     this.value = !this.value;
   }
