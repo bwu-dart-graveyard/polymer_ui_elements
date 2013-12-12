@@ -12,36 +12,11 @@ http://www.polymer-project.org/.
 <link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html">
 
 
-<polymer-element name="polymer-ui-breadcrumbs" attributes="crumbs selected selectedCrumb">
+<polymer-element name="polymer-ui-sidebar-menu" extends="polymer-ui-menu" attributes="label">
   <template>
     <link rel="stylesheet" href="polymer_ui_sidebar_menu.css">
-    <!-- TODO remove style tag when importing external stylesheets is supported -->
-    <style>
-/*
-Copyright 2013 The Polymer Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
+    <link rel="stylesheet" href="polymer_ui_sidebar_menu_alt.css">
 
-@host {
-  * {
-    padding: 0 !important;
-    box-shadow: inset -8px 0px 8px -4px rgba(0, 0, 0, 0.4);
-  }
-  
-  .polymer-ui-light-theme {
-    box-shadow: inset -8px 0px 8px -4px rgba(0, 0, 0, 0.15);
-  }
-}
-
-.sidebar-menu {
-  position: relative;
-  padding: 0 10px;
-  margin: 10px 0;
-  overflow: auto;
-}
-
-    </style>
     <polymer-flex-layout vertical></polymer-flex-layout>
     <polymer-ui-sidebar-header label="{{label}}">
       <content select="[logo]"></content>
@@ -51,4 +26,5 @@ license that can be found in the LICENSE file.
       <polymer-ui-nav-arrow target="{{selectedItem}}"></polymer-ui-nav-arrow>
     </div>  
   </template>
+  <script type="application/dart" src='polymer_ui_sidebar_menu.dart'></script>
 </polymer-element>
