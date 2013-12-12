@@ -44,9 +44,29 @@ class PolymerUiMenuItem extends PolymerUiThemeAware {
    */
   @published String label = '';
 
-  @published String item; // TODO zoechi: item is in JS in attributes list but I couldn't find where it is used and what for 
+  
+  /**
+   * Specifies the URL of the link it goes to when tapped on.
+   *
+   * Example:
+   *
+   *     <polymer-ui-menu-item icon="favorite" label="Favorite" href="http://www.polymer-project.org/"></polymer-ui-menu-item>
+   *
+   * If you want more control on the link, e.g. specify the target for where to
+   * open the linked document, you can put <a> directly inside the menu-item.
+   *
+   * Example:
+   *
+   *     <polymer-ui-menu-item icon="favorite" label="Favorite">
+   *       <a href="http://www.polymer-project.org/" target="_self"></a>
+   *     </polymer-ui-menu-item>
+   */
+  @published String href = '';
+  
+  @published String item;  
   
   @observable bool isShowIcon = false;
+  @observable bool isHideHref = false;
   
   // calc item's offset middle pos instead of using offsetTop/Height 
   // directly which requires to wait for submenu's collapsing transition to 
@@ -54,12 +74,16 @@ class PolymerUiMenuItem extends PolymerUiThemeAware {
  double getOffsetMiddle() {
     var p = this.parentNode as PolymerSelector;
     if (p != null) {
-      var i = p.items;
+      var i = p.items.indexOf(this);
       var h = this.getItemHeight();
       return i * h + h/2 + p.items[0].offsetTop;
     }
   }
  
+  void hrefChanged(old) {
+    isHideHref = (href == null && href.isEmpty); 
+  }
+  
   int getItemHeight() {
     return this.offsetHeight;
   }
