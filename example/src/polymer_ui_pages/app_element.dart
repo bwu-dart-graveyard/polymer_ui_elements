@@ -21,8 +21,12 @@ class AppElement extends PolymerElement {
   void enteredView() {
     super.enteredView();
     document.onClick.listen((e) {
-      var p = shadowRoot.querySelector('polymer-ui-pages'); 
-      p.selected = (p.selected * 1) % 5;
+      var p = shadowRoot.querySelector('polymer-ui-pages');
+      if(p.selected is int) {
+        p.selected = (p.selected + 1) % 5;
+      } else {
+        p.selected = 0;
+      }
     });
   }
 }
