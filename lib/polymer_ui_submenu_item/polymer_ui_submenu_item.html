@@ -14,36 +14,10 @@ http://www.polymer-project.org/.
 
 <polymer-element name="polymer-ui-submenu-item" extends="polymer-ui-menu-item" attributes="active selected selectedItem">
   <template>
-    <link rel="stylesheet" href="polymer-ui-submenu-item.css">
-        <!-- TODO remove style tag when css import works -->
-    <style>
-    /*
-Copyright 2013 The Toolkitchen Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
+    <link rel="stylesheet" href="polymer_ui_submenu_item.css">
+    <link rel="stylesheet" href="polymer_ui_submenu_item_old.css"> <!-- TODO remove -->
+    <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_collapse/polymer_collapse.css">
 
-@host { 
-  * {
-    display: block;
-  }
-}
-
-/* menu */
-#menu {
-  margin-left: 44px;
-  height: 0;
-  /* override @host style on polymer-ui-menu */
-  background-image: none !important;
-  padding: 0 !important;
-}
-
-
-/* !!! from collapse !!!*/
-.polymer-collapse-closed {
-  display: none;
-}
-    </style>
     <polymer-ui-menu-item id="item" src="{{src}}" label="{{label}}" icon="{{icon}}" active?="{{active}}" on-tap="{{activate}}" on-click="{{activate}}">
       <content select=".item-content"></content>
     </polymer-ui-menu-item>

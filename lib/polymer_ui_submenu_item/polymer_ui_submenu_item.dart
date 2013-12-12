@@ -7,7 +7,7 @@ library polymer_ui_elements.polymer_ui_submenu_item;
 
 import 'dart:async' show Stream;
 import 'dart:html' show CustomEvent, Element, EventStreamProvider;
-import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
+import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
@@ -42,12 +42,12 @@ class PolymerUiSubmenuItem extends PolymerUiMenuItem {
 
   final _logger = new Logger('PolymerUiSubmenuItem');
   
-  @published String selected;
-  @published String selectedItem;
+  @published var selected;
+  @published Element selectedItem;
   
   @published bool active = false;
   
-  bool collapsed = true;
+  @observable bool collapsed = true;
   
   static const EventStreamProvider<CustomEvent> _polymerSelectEvent =
       const EventStreamProvider<CustomEvent>('polymer-select');
@@ -82,7 +82,7 @@ class PolymerUiSubmenuItem extends PolymerUiMenuItem {
     if (this.hasItems() && this.active) {
       this.collapsed = !this.collapsed;
       this.unselectAllItems();
-      dispatchEvent(new CustomEvent('polymer-select', detail: {'isSelected': true, 'item': this}));
+      this.fire('polymer-select', detail: {'isSelected': true, 'item': this});
     }
   }
   
