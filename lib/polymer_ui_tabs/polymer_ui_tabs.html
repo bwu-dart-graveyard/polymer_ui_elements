@@ -10,44 +10,12 @@ http://www.polymer-project.org/.
 <link rel="import" href="../../../packages/polymer_elements/polymer_selector/polymer_selector.html">
 <link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html">
 
-<polymer-element name="polymer-ui-tabs" extends="polymer-selector" noscript>
+<polymer-element name="polymer-ui-tabs" extends="polymer-selector">
   <template>
     <link rel="stylesheet" href="polymer_ui_tabs.css">
-    <!-- TODO remove style tag when importing external stylesheets is supported -->
-    <style>
-/*
-Copyright 2013 The Polymer Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
-
-@host {
-  * {
-    height: 60px;
-    white-space: nowrap;
-  }
-}
-
-/*@polyfill @host > * */
-::-webkit-distributed(> :not(template)) {
-	display: inline-block;
-  min-width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  padding: 0 8px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #999;
-}
-
-/*@polyfill @host > *.polymer-selected */
-::-webkit-distributed(> *.polymer-selected) {
-  background: #5599FF;
-  color: white;
-}
-    </style>
+    <link rel="stylesheet" href="polymer_ui_tabs_old.css"> <!-- TODO remove -->
     <polymer-flex-layout></polymer-flex-layout>
     <shadow></shadow>
   </template>
+  <script type="application/dart" src='polymer_ui_tabs.dart'></script>
 </polymer-element>
