@@ -17,7 +17,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
     The demo pages linked below are from an earlier build and have been improved a lot since then. 
 
 The source code of these demo pages can be found in the [example subdirectory of the package](https://github.com/ErikGrimes/polymer_ui_elements/tree/master/example). 
-The actual implementation of the demo page is often outsourced to files in the `examples/src/element_name` subdirectory.
+The actual implementation of the demo page is often outsourced to files in the `example/src/element_name` subdirectory.
 
 ## Usage
 * add the following to your pubspec.yaml file: 
