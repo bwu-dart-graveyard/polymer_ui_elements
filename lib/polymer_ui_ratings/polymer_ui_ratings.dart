@@ -5,7 +5,7 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_ratings;
 
-import 'dart:html' show Element;
+import 'dart:html' show Element, Event;
 import 'package:observe/observe.dart' show ObservableList, ObservableMap;
 import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
@@ -51,7 +51,6 @@ class PolymerUiRatings extends PolymerUiThemeAware {
    * @default 0
    */
   @published int value = 0;
-  @published String color = '';
   @observable ObservableList<ObservableMap> stars;
   
   @override
@@ -81,7 +80,7 @@ class PolymerUiRatings extends PolymerUiThemeAware {
   /**
    * [updateValue] is the tap event handler.
    */
-  void updateValue(event, detail, Element sender) {
+  void updateValue(Event event, detail, Element sender) {
     int i = int.parse(sender.attributes['index']);
     this.value = i + 1;
   }
