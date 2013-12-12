@@ -82,19 +82,12 @@ class PolymerUiMenuButton extends PolymerElement {
   
   bool _isParallaxActionRunning = false;
   
-//  @override
-//  void ready() {
-//    super.ready();
-//    this.boundParallaxAction = this.parallaxAction.bind(this);
-//  }
-  
   StreamSubscription _deviceorientationSubscription;
   Map<String, int> _tilt;
   
   void openedChanged(oldValue) {
     new Timer(Duration.ZERO, () {
-      this._isParallaxActionRunning = true;
-      // TODO (this.$['arrowPositionHelper'] as PolymerAnchorPoint).apply();
+//      this._isParallaxActionRunning = true;
       this.$['arrowPositionHelper'].apply();
       this._tilt = null;
       if (this.parallax) {
@@ -106,14 +99,6 @@ class PolymerUiMenuButton extends PolymerElement {
       }
       this._isParallaxActionRunning = false;
     });
-  }
-  
-  void valignChanged(oldValue) {
-    if(valign == 'top') {
-      direction = 'down';
-    } else {
-      direction = 'up';
-    }
   }
   
   void parallaxAction(DeviceOrientationEvent e) {
@@ -161,7 +146,6 @@ class PolymerUiMenuButton extends PolymerElement {
    * The selected menu item.
    */
   Element get selection {
-    // TODO return (this.$['menu'] as PolymerUiMenu).selection;
     return this.$['menu'].selection;
   }  
 }

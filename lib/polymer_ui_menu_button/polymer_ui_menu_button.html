@@ -17,61 +17,7 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-menu-button" attributes="src icon opened responsive halign valign selected selectedItem selectedClass valueattr multi parallax">
   <template>
     <link rel="stylesheet" href="polymer_ui_menu_button.css">
-    <!-- TODO remove style tag when importing external stylesheets is supported -->
-    <style>
-@host {
-	:scope {
-		position: relative;
-		display: inline-block;
-	}
-	.fullwidth {
-		position: static;
-	}
-}
-
-#overlay {
-	position: absolute;
-	left: 0;
-	top: 42px;
-}
-
-#overlay[halign=right] {
-	left: auto;
-	right: 10px;
-}
-
-#overlay[valign=top] {
-	top: auto;
-	bottom: 48px;
-}
-
-#overlayMenu {
-	display: inline-block;
-	position: relative;
-	top: -1px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	background: white;
-	border: 1px solid rgba(0, 0, 0, 0.15);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-	margin: 7px 0 0 7px;
-}
-
-@media screen and (max-width: 800px) {
-  #overlay,
-	#overlay[align=right] {
-    left: 0;
-    width: 100%;
-    -webkit-transform: none;
-    transform: none;
-  }  
-}
-
-#arrow {
-	height: 18px;
-}
-
-    </style>
+    <link rel="stylesheet" href="polymer_ui_menu_button_old.css">
     <polymer-ui-icon-button id="button" on-tap="{{toggle}}" on-click={{toggle}} src="{{src}}" icon="{{icon}}" active="{{opened}}" anchor-point="{{valign}}"></polymer-ui-icon-button> <!-- remove on-click when PointerEvents are available -->
     <div id="overlay" halign="{{halign}}" valign="{{valign}}">
       <div id="overlayBackdrop" pseudo="x-backdrop" overlay-toggle></div>
