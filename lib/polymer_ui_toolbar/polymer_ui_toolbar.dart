@@ -5,7 +5,7 @@
 // http://www.polymer-project.org/. 
 library polymer_ui_elements.polymer_ui_toolbar;
 
-import 'dart:html' show Event, Node;
+import 'dart:html' show Event, Node, CustomEvent;
 import 'package:polymer/polymer.dart' show CustomTag, observable, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
 // https://code.google.com/p/dart/issues/detail?id=13849
@@ -48,7 +48,20 @@ class PolymerUiToolbar extends PolymerUiThemeAware{
   
   @published String responsiveWidth = '800px';
   @observable bool queryMatches = false;
+  @observable String mquery = '';
 
+  void ready() {
+    this.on['polymer-mediachange'].listen((CustomEvent e) {
+      queryMatches = e.detail['matches'];
+    });
+    defaultTheme = 'polymer-ui-light-theme';
+    responsiveWidthChanged(null);
+  }
+  
+  void responsiveWidthChanged(old) {
+    mquery = 'max-width: ${responsiveWidth}';
+  }
+  
   void queryMatchesChanged(oldValue) {
     this.classes.toggle('narrow-layout', this.queryMatches);
   }
