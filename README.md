@@ -1,6 +1,6 @@
 # Basic visual elements for Polymer.dart
 
-A port of polymer.js' [polymer-ui-elements](https://github.com/Polymer/polymer-ui-elements) to Polymer.dart.
+A port of polymer.js' [polymer-ui-elements](http://www.polymer-project.org/docs/elements/#elements) to Polymer.dart.
 The intent of the authors is to contribute the work to the Dart project itself (https://www.dartlang.org).
 
 ### Non-visual elements for Dart can be found in
@@ -8,7 +8,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 
 ## Documentation
-* The Dart source files of an element often contains some documentation (Dartdoc) how to use the element. You can find the documentation online at  
+* The Dart source files of an element often contain some documentation (Dartdoc) how to use the element. You can also find this documentation online at  
 * [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
     
     We were not able to build JavaScript versions of the demo pages for polymer_ui_elements.
