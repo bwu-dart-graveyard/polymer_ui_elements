@@ -11,25 +11,8 @@ http://www.polymer-project.org/.
 
 <polymer-element name="polymer-ui-collapsible" attributes="active notap">
   <template>
+    <link rel="stylesheet" href="polymer_ui_collapsible_old.css"> <!-- TODO remove -->
     <link rel="stylesheet" href="polymer_ui_collapsible.css">
-    <!-- TODO remove style tag when importing external styles is supported by dart -->
-    <style>
-/*
-Copyright 2013 The Polymer Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
-
-@host {
-  * {
-    display: block;
-  }
-}
-
-#collapsibleBody {
-  height: 0;
-}    
-    </style>
     <div on-tap="{{headerTap}}" on-click="{{headerTap}}">
       <content select=".polymer-ui-collapsible-header"></content>
     </div>

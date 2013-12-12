@@ -7,6 +7,21 @@ library polymer_ui_elements.polymer_ui_collapsible;
 
 import 'package:polymer/polymer.dart';
 
+/**
+ * polymer-ui-collapsible has a header and a body and the body appears or
+ * disappears based on "active" property.  Tapping on the header will toggle
+ * the active state.  User needs to put the class "polymer-ui-collapsible-header"
+ * on the element to indicate it represents a header.
+ *
+ * Example:
+ *
+ *     <polymer-ui-collapsible>
+ *       <div class="polymer-ui-collapsible-header">Title</div>
+ *       <div>
+ *         some content...
+ *       </div>
+ *     </polymer-ui-collapsible>
+ */
 @CustomTag('polymer-ui-collapsible')
 class PolymerUiCollapsible extends PolymerElement {
   PolymerUiCollapsible.created() : super.created();
@@ -18,9 +33,6 @@ class PolymerUiCollapsible extends PolymerElement {
 
   /**
    * If true, the body is expanded.
-   * @attribute active
-   * @type boolean
-   * @default false
    */
   @published bool active = false;
 
