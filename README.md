@@ -6,6 +6,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
 ### Non-visual elements for Dart can be found in
 * [polymer_elements](https://github.com/ErikGrimes/polymer_elements)
 
+
 ## Documentation
 * The Dart source files of an element often contains some documentation (Dartdoc) how to use the element. You can find the documentation online at  
 * [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
@@ -18,6 +19,7 @@ The intent of the authors is to contribute the work to the Dart project itself (
 
 The source code of these demo pages can be found in the [example subdirectory of the package](https://github.com/ErikGrimes/polymer_ui_elements/tree/master/example). 
 The actual implementation of the demo page is often outsourced to files in the `example/src/element_name` subdirectory.
+
 
 ## Usage
 * add the following to your pubspec.yaml file: 
@@ -38,6 +40,15 @@ dependencies:
 ```html
     <link rel="import" href="../../../packages/polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.html">
 ```
+
+
+## Feedback
+
+Your feedback is very much appreciated. We are excited to hear about your experience using polymer_ui_elements.
+We need your feedback to continually improve the qualtiy.
+
+Just [Create a New Issue](https://github.com/ErikGrimes/polymer_ui_elements/issues/new) 
+
 
 ## General notes
 
