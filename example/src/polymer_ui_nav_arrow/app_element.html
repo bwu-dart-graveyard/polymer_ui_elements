@@ -7,6 +7,7 @@ This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/. 
 -->
 <link rel="import" href="packages/polymer_ui_elements/polymer_ui_nav_arrow/polymer_ui_nav_arrow.html">
+<link rel="import" href="packages/polymer_elements/polymer_selector/polymer_selector.html">
 
 <polymer-element name="app-element">
   <template>
@@ -36,14 +37,14 @@ http://www.polymer-project.org/.
       }
     </style>
     <div class="container">
-      <polymer-selector>
+      <polymer-selector on-polymer-select='{{selectHandler}}'>
         <div>Item 1</div>
         <div>Item 2</div>
         <div>Item 3</div>
         <div>Item 4</div>
         <div>Item 5</div>
       </polymer-selector>
-      <polymer-ui-nav-arrow></polymer-ui-nav-arrow>
+      <polymer-ui-nav-arrow id='nav-arrow'></polymer-ui-nav-arrow>
     </div>
   </template>
 

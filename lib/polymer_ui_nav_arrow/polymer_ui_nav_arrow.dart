@@ -7,7 +7,7 @@ library polymer_ui_elements.polymer_ui_nav_arrow;
 
 import 'dart:async' show Timer;
 import 'dart:html' show Element;
-import 'package:polymer/polymer.dart' show CustomTag, published,
+import 'package:polymer/polymer.dart' show CustomTag, observable, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
@@ -30,7 +30,7 @@ import 'package:polymer_ui_elements/polymer_ui_arrow/polymer_ui_arrow.dart' show
  *     </polymer-selector>
  *     <polymer-ui-nav-arrow target="{{item}}"></polymer-ui-nav-arrow>
  */
-@CustomTag('polymer-ui-breadcrumbs')
+@CustomTag('polymer-ui-nav-arrow')
 class PolymerUiNavArrow extends PolymerUiArrow {
   PolymerUiNavArrow.created() : super.created() {
     _logger.finest('created');
@@ -43,25 +43,27 @@ class PolymerUiNavArrow extends PolymerUiArrow {
    */
   @published Element target; 
   
-  String _direction = 'left';
+  
   int _size = 9;
   String _borderColor = '#000';
-  bool _show = false;
+  @observable bool show = false;
   
   @override
   void enteredView() {
     super.enteredView();
+    direction = 'left';
     this.showChanged(null);
   }
   
   void showChanged(oldValue) {
-    this.classes.toggle('hidden', !this._show);
+    this.classes.toggle('hidden', !this.show);
   }
   
   void targetChanged() {
-    this._show = (this.target != null);
+    this.show = (this.target != null);
+
     if (this.target != null) {
-      new Timer(Duration.ZERO, () => move());
+      Timer.run(() => move());
     }
   }
   
