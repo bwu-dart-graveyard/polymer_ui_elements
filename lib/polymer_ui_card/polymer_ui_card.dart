@@ -6,7 +6,7 @@
 library polymer_ui_elements.polymer_ui_card;
 
 import 'dart:async' show Stream, StreamSubscription;
-import 'dart:html' show CssStyleDeclaration, CustomEvent, EventStreamProvider ,HtmlElement;
+import 'dart:html' show CssStyleDeclaration, CustomEvent, Event, EventStreamProvider ,HtmlElement;
 import 'dart:math' show max, sqrt;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
