@@ -7,39 +7,10 @@ This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/. 
 -->
 <polymer-element name="polymer-ui-splitter" attributes="direction locked"
-    on-trackstart="{{trackStart}}" on-track="{{track}}" on-trackend="{{trackEnd}}">
+    on-trackstart="{{trackStart}}" on-track="{{track}}" on-trackend="{{trackEnd}}" on-drag-start="{{trackStart}}" on-drag="{{track}}" on-drag-end="{{trackEnd}}">
   <template>
     <link rel="stylesheet" href="polymer_ui_splitter.css">
-    <!-- TODO remove style tag when importing external stylesheets is supported -->
-    <style>
-/*
-Copyright 2013 The Polymer Authors. All rights reserved.
-Use of this source code is governed by a BSD-style
-license that can be found in the LICENSE file.
-*/
-
-@host {
-  * {
-    display: block;
-    width: 10px;
-    background: #efefef url(handle.png) no-repeat center;
-    box-shadow: inset 0 0 2px 1px #ccc;
-    opacity: 0.9;
-    cursor: col-resize;
-  }
-  
-  .horizontal {
-    width: auto;
-    height: 10px;
-    cursor: row-resize;
-    background-image: url(handle_horiz.png);
-  }
-  
-  :hover, .active {
-    background-color: #ddd;
-  }
-}
-    </style>
+    <link rel="stylesheet" href="polymer_ui_splitter_old.css"><!-- TODO remove -->
   </template>
 
   <script type="application/dart" src='polymer_ui_splitter.dart'></script>
