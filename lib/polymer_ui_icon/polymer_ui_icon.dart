@@ -186,7 +186,7 @@ class PolymerUiIcon extends PolymerUiThemeAware {
       // bg.removeAt(0);
       var l = bp.length == 4 ? bp[1] : bp[0];
       
-      var offset = num.parse(new RegExp(r'^[-+\d,\.]*').firstMatch(l).group(0));
+      var offset = int.parse(new RegExp(r'^[-+\d,\.]*').firstMatch(l).group(0));
       
       _logger.finest('calcThemeOffset - theme: ${theme}; offset: ${offset}');
       themes[theme] = offset;
