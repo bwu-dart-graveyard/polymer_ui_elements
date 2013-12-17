@@ -5,7 +5,8 @@ import 'dart:html' show HtmlElement;
 typedef validateThemeFunc(HtmlElement element, {String theme, String activeTheme, String defaultTheme});
 
 String validateTheme(HtmlElement element, {String theme, String activeTheme, String defaultTheme}) {
-  var newTheme = theme;  
+  var newTheme = theme;
+  var newDefaultTheme = defaultTheme;
   if (theme == null || theme.isEmpty) {
     var p = element;
     while (p != null && (newTheme == null || newTheme.isEmpty)) {
@@ -13,6 +14,10 @@ String validateTheme(HtmlElement element, {String theme, String activeTheme, Str
         var t = p.attributes['theme'];
         if (t != null) {
           newTheme = t;
+        }
+        var dt = p.attributes['defaultTheme'];
+        if(dt != null) {
+          newDefaultTheme = dt;
         }
       }
       p = p.parent;
@@ -23,6 +28,7 @@ String validateTheme(HtmlElement element, {String theme, String activeTheme, Str
     return theme;
   } else if (newTheme != null && newTheme.isNotEmpty){
     return newTheme;
+  } else {
+    return newDefaultTheme;
   }
-  return defaultTheme;
 }

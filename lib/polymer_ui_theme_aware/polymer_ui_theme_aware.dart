@@ -17,9 +17,9 @@ class PolymerUiThemeAware extends PolymerElement {
   final _logger = new Logger('PolymerUiThemeAware');
 
   @published String theme = '';
+  @published String defaultTheme = '';
   
   @observable String activeTheme = '';
-  String defaultTheme = '';
 
   @override
   void enteredView() {
