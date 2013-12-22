@@ -15,7 +15,7 @@ http://www.polymer-project.org/.
     <link rel="stylesheet" href="polymer_ui_breadcrumbs_old.css">
     <div id="crumbs">
       <template repeat="{{c in crumbs | enumerate}}">
-        <li selected-index="{{c.index}}" class="label"><a href="{{c.value['href']}}" disabled="{{!href}}">{{c.value['label']}}</a></li>
+        <li selected-index="{{c.index}}" class="label"><a href="{{c.value['href']}}" disabled?="{{!c.value.containsKey('href')}}">{{c.value['label']}}</a></li>
         <polymer-ui-icon icon="dropdown"></polymer-ui-icon>
       </template>
     </div>
