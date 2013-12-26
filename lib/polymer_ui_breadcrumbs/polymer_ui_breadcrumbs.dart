@@ -21,8 +21,8 @@ import 'package:logging/logging.dart' show Logger;
  *
  *     ....
  *     this.crumbs = [
- *       {label: 'Overview'}, 
- *       {label: 'Subitem1'}, 
+ *       {label: 'Overview', href: 'example1.com'}, 
+ *       {label: 'Subitem1', href: 'example2.com'}, 
  *       {label: 'Subitem2'},
  *       {label: 'Subitem3'}
  *     ];
@@ -41,8 +41,8 @@ class PolymerUiBreadcrumbs extends PolymerElement {
    * Example:
   *
    *     this.crumbs = [
-   *       {label: 'Overview'}, 
-   *       {label: 'Subitem1'}, 
+   *       {label: 'Overview', href: 'example1.com'}, 
+   *       {label: 'Subitem1', href: 'example2.com'}, 
    *       {label: 'Subitem2'},
    *       {label: 'Subitem3'}
    *     ];
