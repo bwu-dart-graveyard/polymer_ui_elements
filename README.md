@@ -58,7 +58,7 @@ Just [Create a New Issue](https://github.com/ErikGrimes/polymer_ui_elements/issu
 
 Element name               |   Status    | Comment          | Demo
 -------------------------- | ----------- | ---------------- | ----
-polymer-ui-accordion       | ported      |                  | [demo](http://erikgrimes.github.io/polymer_ui_elements/build_ui/polymer_ui_accordion.html)
+polymer-ui-accordion       | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_accordion.html)
 polymer&#8209;ui&#8209;animated&#8209;pages  | not started |                  |     
 polymer-ui-arrow           | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_arrow.html)
 polymer-ui-breadcrumbs     | ported      |              		| [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_breadcrumbs.html)     
