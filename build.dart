@@ -5,6 +5,7 @@ void main(args) {
                       'example/polymer_ui_arrow.html',
                       'example/polymer_ui_breadcrumbs.html',
                       'example/polymer_ui_card.html',
+                      'example/polymer_ui_clock.html',
                       'example/polymer_ui_collapsible.html',
                       'example/polymer_ui_field.html',
                       'example/polymer_ui_icon_button.html',
