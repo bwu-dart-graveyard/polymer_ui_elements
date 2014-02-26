@@ -63,7 +63,7 @@ polymer&#8209;ui&#8209;animated&#8209;pages  | not started |                  |
 polymer-ui-arrow           | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_arrow.html)
 polymer-ui-breadcrumbs     | ported      |              		| [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_breadcrumbs.html)     
 polymer-ui-card            | ported      | depends on pointer events which are not yet available | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_card.html) 
-polymer-ui-clock           | not&nbsp;started |                  | 
+polymer-ui-clock           | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_clock.html)
 polymer-ui-collapsible     | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_collapsible.html)     
 polymer-ui-dark-theme      | not started |                  |      
 polymer-ui-field           | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_field.html)
