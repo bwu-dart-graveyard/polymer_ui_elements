@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
-the AUTHORS file for details. All rights reserved. Use of this source code is 
-governed by a BSD-style license that can be found in the LICENSE file. 
-This work is a port of the polymer-elements from the Polymer project, 
-http://www.polymer-project.org/. 
+the AUTHORS file for details. All rights reserved. Use of this source code is
+governed by a BSD-style license that can be found in the LICENSE file.
+This work is a port of the polymer-elements from the Polymer project,
+http://www.polymer-project.org/.
 -->
 
 <html>
@@ -12,37 +12,35 @@ http://www.polymer-project.org/.
     <title>polymer-ui-splitter</title>
     <link rel="import" href="packages/polymer_ui_elements/polymer_ui_splitter/polymer_ui_splitter.html">
     <link rel="import" href="packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.css">
-    <link rel="import" href="packages/polymer_elements/polymer_flex_layout/polymer_flex_layout_old.css"><!-- TODO remove -->
-    
+
     <link rel="stylesheet" href="packages/polymer_ui_elements/asset/base.css">
-    <link rel="stylesheet" href="packages/polymer_ui_elements/asset/basic_old.css"><!-- TODO remove -->
-    
+
     <script type="application/dart">
       export 'packages/polymer/init.dart';
     </script>
     <script src="packages/browser/dart.js"></script>
-  
+
     <style>
       body {
         -webkit-user-select: none;
         -moz-user-select: none;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
       }
-      
+
       .container {
         width: 400px;
         height: 200px;
         border: 4px solid #aaa;
       }
-      
+
       .container div {
         overflow: hidden;
       }
-      
+
       #box1, #box3, #box5, #box6 {
         width: 100px;
       }
-      
+
       #box2, #box4 {
         height: 40px;
       }

@@ -1,15 +1,15 @@
-// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see 
-// the AUTHORS file for details. All rights reserved. Use of this source code is 
+// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+// the AUTHORS file for details. All rights reserved. Use of this source code is
 // governed by a BSD-style license that can be found in the LICENSE file.
-// This work is a port of the polymer-elements from the Polymer project, 
-// http://www.polymer-project.org/. 
+// This work is a port of the polymer-elements from the Polymer project,
+// http://www.polymer-project.org/.
 library polymer_ui_elements.polymer_ui_card;
 
 import 'dart:async' show Stream, StreamSubscription;
 import 'dart:html' show CssStyleDeclaration, CustomEvent, Event, EventStreamProvider ,HtmlElement;
 import 'dart:math' show max, sqrt;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
-ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
+ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
@@ -32,7 +32,7 @@ class PolymerUiCard extends PolymerElement {
   }
 
   final _logger = new Logger('polymer-ui-card');
-  
+
   /**
    * If true, the card can be swiped.
    */
@@ -43,7 +43,7 @@ class PolymerUiCard extends PolymerElement {
   double _w;
   double _offsetWidth;
   bool _away;
-  
+
   StreamSubscription _transitionEndSubscription;
 
   static const EventStreamProvider<CustomEvent> _cardSwypeAwayEvent =
@@ -60,23 +60,23 @@ class PolymerUiCard extends PolymerElement {
     super.ready();
     this.setAttribute('touch-action', 'pan-y');
   }
-  
+
   @override
   void leftView() {
     this.removeListeners();
     super.leftView();
   }
-  
+
   void addListeners() {
     this.onTransitionEnd.listen((e) => this.transitionEnd(e));
   }
-  
+
   void removeListeners() {
     if (_transitionEndSubscription != null) {
       _transitionEndSubscription.cancel();
     }
   }
-  
+
   void swipeableChanged(oldValue) {
     if (this.swipeable) {
       this.addListeners();
@@ -84,7 +84,8 @@ class PolymerUiCard extends PolymerElement {
       this.removeListeners();
     }
   }
-  
+
+  // TODO conflicts with animate method of super class
   void animate(double x) {
     CssStyleDeclaration s = this.style;
     var d = x > 0 ? 1 : -1;
@@ -98,7 +99,7 @@ class PolymerUiCard extends PolymerElement {
     var rotate = 'rotate(${deg}deg)';
     s.transform = translate + (this.noCurve ? '' : ' ' + rotate);
   }
-  
+
   void trackStart(e) {
     if (this.swipeable) {
       e.preventTap();
@@ -106,27 +107,27 @@ class PolymerUiCard extends PolymerElement {
       this.classes.add('dragging');
     }
   }
-  
+
   void track(e) {
     if (this.swipeable) {
       this.animate(e.dx);
     }
   }
-  
+
   void trackEnd(e) {
     if (this.swipeable) {
-      this.swipeEnd((e.dx).abs() > this._w / 2 && e.dx * e.xDirection > 0, 
+      this.swipeEnd((e.dx).abs() > this._w / 2 && e.dx * e.xDirection > 0,
           e.dx > 0);
     }
   }
-  
+
   void flick(e) {
     if (this.swipeable && !this._away) {
       var v = e.xVelocity;
       this.swipeEnd(v.abs() > 2, v > 0);
     }
   }
-  
+
   void swipeEnd(bool away, bool dir) {
     this.classes.remove('dragging');
     this._away = away;
@@ -137,7 +138,7 @@ class PolymerUiCard extends PolymerElement {
       this.animate(0.0);
     }
   }
-  
+
   void transitionEnd(e) {
     if (this._away) {
       dispatchEvent(new CustomEvent('polymer-card-swipe-away'));
