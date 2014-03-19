@@ -18,18 +18,18 @@ license that can be found in the LICENSE file.
   height: 24px;
   margin: 0 5px;
   background-size: 100% 100%;
-  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_darkalt.png');
+  background-image: url('../../../packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_darkalt.png');
   cursor: pointer;
 }
 
 #star.full {
-  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_darkreg.png');
+  background-image: url('../../../packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_darkreg.png');
 }
 
 :host(.polymer-ui-dark-theme:host) #star {
-  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_lightalt.png');
+  background-image: url('../../../packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_lightalt.png');
 }
 
 :host(.polymer-ui-dark-theme:host) #star.full {
-  background-image: url('packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_lightreg.png');
+  background-image: url('../../../packages/polymer_ui_elements/polymer_ui_ratings/assets/ic_star_rate_lightreg.png');
 }

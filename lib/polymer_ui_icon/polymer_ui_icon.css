@@ -20,5 +20,5 @@ license that can be found in the LICENSE file.
 }
 
 :host(.polymer-ui-icons:host) {
-  background-image: url(packages/polymer_ui_elements/polymer_ui_icon/action_icons.png);
+  background-image: url(action_icons.png);
 }

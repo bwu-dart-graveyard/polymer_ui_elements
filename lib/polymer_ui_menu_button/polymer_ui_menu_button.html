@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
-the AUTHORS file for details. All rights reserved. Use of this source code is 
-governed by a BSD-style license that can be found in the LICENSE file. 
-This work is a port of the polymer-elements from the Polymer project, 
-http://www.polymer-project.org/. 
+the AUTHORS file for details. All rights reserved. Use of this source code is
+governed by a BSD-style license that can be found in the LICENSE file.
+This work is a port of the polymer-elements from the Polymer project,
+http://www.polymer-project.org/.
 -->
 <link rel="import" href="../../../packages/polymer_elements/polymer_anchor_point/polymer_anchor_point.html">
 <link rel="import" href="../../../packages/polymer_elements/polymer_media_query/polymer_media_query.html">
@@ -17,7 +17,6 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-menu-button" attributes="src icon opened responsive halign valign selected selectedItem selectedClass valueattr multi parallax">
   <template>
     <link rel="stylesheet" href="polymer_ui_menu_button.css">
-    <link rel="stylesheet" href="polymer_ui_menu_button_old.css">
     <polymer-ui-icon-button id="button" on-tap="{{toggle}}" on-click={{toggle}} src="{{src}}" icon="{{icon}}" active="{{opened}}" anchor-point="{{valign}}"></polymer-ui-icon-button> <!-- remove on-click when PointerEvents are available -->
     <div id="overlay" halign="{{halign}}" valign="{{valign}}">
       <div id="overlayBackdrop" pseudo="x-backdrop" overlay-toggle></div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
-the AUTHORS file for details. All rights reserved. Use of this source code is 
-governed by a BSD-style license that can be found in the LICENSE file. 
-This work is a port of the polymer-elements from the Polymer project, 
-http://www.polymer-project.org/. 
+the AUTHORS file for details. All rights reserved. Use of this source code is
+governed by a BSD-style license that can be found in the LICENSE file.
+This work is a port of the polymer-elements from the Polymer project,
+http://www.polymer-project.org/.
 -->
 <link rel="import" href="../polymer_ui_icon/polymer_ui_icon.html">
 <link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
@@ -12,9 +12,8 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-menu-item" extends="polymer-ui-theme-aware" attributes="src label icon item href">
   <template>
     <link rel="stylesheet" href="polymer_ui_menu_item.css">
-    <link rel="stylesheet" href="polymer_ui_menu_item_old.css">
     <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_collapse/polymer_collapse.css">
-    
+
     <polymer-ui-icon src="{{src}}" icon="{{icon}}" showing?="{{isShowIcon}}"></polymer-ui-icon>
     <span id="label">{{label}}<content></content></span>
     <a id="link" href="{{href}}" hidden="{{isShowHref}}"></a>
