@@ -21,4 +21,3 @@ dev_dependencies:
 transformers:
 - polymer:
     entry_points:
-

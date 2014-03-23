@@ -24,8 +24,12 @@ import 'package:polymer/polymer.dart';
 @CustomTag('polymer-ui-clock')
 class PolymerUiClock extends PolymerElement {
 
-  var _days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  var _months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  // note: properties only used in MDV bindings need not be declared (xSecond, ySecond, rotateSecond, etc.)
+  // properties that need observation (e.g. we observe 'time' via 'timeChanged') must be declared
+
+  var _days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  var _months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+      'Oct', 'Nov', 'Dec'];
   var _degToRad = PI / 180;
 
   /**
@@ -69,7 +73,7 @@ class PolymerUiClock extends PolymerElement {
 
   Timer _timer;
 
-  PolymerUiClock.created() : super.created();
+  PolymerUiClock.created(): super.created();
 
   @override
   void enteredView() {
@@ -89,14 +93,14 @@ class PolymerUiClock extends PolymerElement {
     time = new DateTime.now();
   }
 
-  timeChanged() {
-    dateStr = [_days[time.weekday], _months[time.month], time.day].join(' ');
+  void timeChanged() {
+    dateStr = [_days[time.weekday - 1], _months[time.month], time.day].join(' ');
     hours = time.hour;
     minutes = time.minute;
     seconds = time.second;
   }
 
-  secondsChanged() {
+  void secondsChanged() {
     // if secods have changed, update the clock second hand
     rotateSecond = this.seconds * 6;
     var px = 1;
@@ -107,7 +111,7 @@ class PolymerUiClock extends PolymerElement {
     ySecond = 99 - py;
   }
 
-  minutesChanged() {
+  void minutesChanged() {
     // if minutes have changed, update the clock minute hand
     rotateMinute = this.minutes * 6;
     var px = 2;
@@ -118,7 +122,7 @@ class PolymerUiClock extends PolymerElement {
     yMinute = 99 - py;
   }
 
-  hoursChanged() {
+  void hoursChanged() {
     // if hours have change, update the clock hour hand
     rotateHour = this.hours * 30;
     var px = 3;
