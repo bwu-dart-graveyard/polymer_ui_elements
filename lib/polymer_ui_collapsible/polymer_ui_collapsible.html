@@ -12,10 +12,10 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-collapsible" attributes="active notap">
   <template>
     <link rel="stylesheet" href="polymer_ui_collapsible.css">
-    <div on-tap="{{headerTap}}" on-click="{{headerTap}}">
+    <div on-tap="{{headerTap}}">
       <content select=".polymer-ui-collapsible-header"></content>
     </div>
-    <div id="collapsibleBody" on-tap="{{bodyTap}}" on-click="{{bodyTap}}">
+    <div id="collapsibleBody" on-tap="{{bodyTap}}">
       <content></content>
     </div>
     <polymer-collapse targetId="collapsibleBody" closed="{{!active}}"></polymer-collapse>
