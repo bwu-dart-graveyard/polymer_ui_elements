@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
-the AUTHORS file for details. All rights reserved. Use of this source code is 
-governed by a BSD-style license that can be found in the LICENSE file. 
-This work is a port of the polymer-elements from the Polymer project, 
-http://www.polymer-project.org/. 
+the AUTHORS file for details. All rights reserved. Use of this source code is
+governed by a BSD-style license that can be found in the LICENSE file.
+This work is a port of the polymer-elements from the Polymer project,
+http://www.polymer-project.org/.
 -->
 <link rel="import" href="../polymer_ui_sidebar_header/polymer_ui_sidebar_header.html">
 <link rel="import" href="../polymer_ui_menu/polymer_ui_menu.html">
@@ -15,7 +15,6 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-sidebar-menu" extends="polymer-ui-menu" attributes="label">
   <template>
     <link rel="stylesheet" href="polymer_ui_sidebar_menu.css">
-    <link rel="stylesheet" href="polymer_ui_sidebar_menu_alt.css">
 
     <polymer-flex-layout vertical></polymer-flex-layout>
     <polymer-ui-sidebar-header label="{{label}}">
@@ -24,7 +23,7 @@ http://www.polymer-project.org/.
     <div class="sidebar-menu" flex>
       <shadow></shadow>
       <polymer-ui-nav-arrow target="{{selectedItem}}"></polymer-ui-nav-arrow>
-    </div>  
+    </div>
   </template>
   <script type="application/dart" src='polymer_ui_sidebar_menu.dart'></script>
 </polymer-element>
