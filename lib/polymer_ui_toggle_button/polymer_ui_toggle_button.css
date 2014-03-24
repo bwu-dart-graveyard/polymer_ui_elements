@@ -22,7 +22,7 @@ license that can be found in the LICENSE file.
   font-size: 10px;
 }
 
-:host([value]:host) {
+:host(.on:host) {
   border: 1px solid #0fb2c6;
 }
 
