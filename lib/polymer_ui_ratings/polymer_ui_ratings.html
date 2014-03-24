@@ -12,7 +12,7 @@ http://www.polymer-project.org/.
   <template>
     <link rel="stylesheet" href="polymer_ui_ratings.css">
     <template repeat="{{star in stars}}">
-      <span id="star" index="{{star['index']}}" class="{{star['starClass']}}" on-tap="{{updateValue}}" on-click="{{updateValue}}"></span>
+      <span id="star" index="{{star['index']}}" class="{{star['starClass']}}" on-click="{{updateValue}}"></span> <!-- todo on-tap -->
     </template>
   </template>
 

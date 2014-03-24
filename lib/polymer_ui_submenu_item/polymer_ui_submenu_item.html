@@ -17,7 +17,7 @@ http://www.polymer-project.org/.
     <link rel="stylesheet" href="polymer_ui_submenu_item.css">
     <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_collapse/polymer_collapse.css">
 
-    <polymer-ui-menu-item id="item" src="{{src}}" label="{{label}}" icon="{{icon}}" active?="{{active}}" on-tap="{{activate}}" on-click="{{activate}}">
+    <polymer-ui-menu-item id="item" src="{{src}}" label="{{label}}" icon="{{icon}}" active?="{{active}}"  on-click="{{activate}}"> <!-- todo on-tap -->
       <content select=".item-content"></content>
     </polymer-ui-menu-item>
     <polymer-ui-menu id="menu" selected="{{selected}}" selectedItem="{{selectedItem}}">
