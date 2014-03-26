@@ -15,7 +15,6 @@ http://www.polymer-project.org/.
 <polymer-element name="polymer-ui-submenu-item" extends="polymer-ui-menu-item" attributes="active selected selectedItem">
   <template>
     <link rel="stylesheet" href="polymer_ui_submenu_item.css">
-    <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_collapse/polymer_collapse.css">
 
     <polymer-ui-menu-item id="item" src="{{src}}" label="{{label}}" icon="{{icon}}" active?="{{active}}"  on-click="{{activate}}"> <!-- todo on-tap -->
       <content select=".item-content"></content>
