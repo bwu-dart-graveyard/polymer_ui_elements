@@ -4,7 +4,7 @@ Use of this source code is governed by a BSD-style
 license that can be found in the LICENSE file.
 */
 
-:host { 
+:host {
   display: block;
   position: relative;
   box-sizing: border-box;
@@ -36,7 +36,7 @@ license that can be found in the LICENSE file.
 :host(.polymer-ui-dark-theme:host) {
   color: #b3b3b3;
 }
-  
+
 :host(.polymer-ui-dark-theme:hover:host) {
   color: rgba(255, 255, 255, 0.9);
 }
@@ -67,7 +67,7 @@ polymer-ui-icon {
 }
 
 /*@polyfill :host #label > a, #link */
-::content > a, #link {
+content /content/ a, #link, ::content > a { {
   position: absolute;
   top: 0;
   right: 0;

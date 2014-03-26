@@ -1,12 +1,12 @@
-// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see 
-// the AUTHORS file for details. All rights reserved. Use of this source code is 
+// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+// the AUTHORS file for details. All rights reserved. Use of this source code is
 // governed by a BSD-style license that can be found in the LICENSE file.
-// This work is a port of the polymer-elements from the Polymer project, 
-// http://www.polymer-project.org/. 
+// This work is a port of the polymer-elements from the Polymer project,
+// http://www.polymer-project.org/.
 library polymer_ui_elements.polymer_ui_menu_item;
 
 import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published,
-ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
+ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
@@ -28,23 +28,23 @@ class PolymerUiMenuItem extends PolymerUiThemeAware {
   }
 
   final _logger = new Logger('polymer-ui-menu-item');
-  
+
   /**
    * The URL of an image for the icon.
    */
   @published String src = '';
-  
+
   /**
    * Specifies the icon from the Polymer icon set.
    */
   @published String icon = '';
-  
+
   /**
    * Specifies the label for the menu item.
    */
   @published String label = '';
 
-  
+
   /**
    * Specifies the URL of the link it goes to when tapped on.
    *
@@ -62,14 +62,14 @@ class PolymerUiMenuItem extends PolymerUiThemeAware {
    *     </polymer-ui-menu-item>
    */
   @published String href = '';
-  
-  @published String item;  
-  
+
+  @published String item;
+
   @observable bool isShowIcon = false;
   @observable bool isHideHref = false;
-  
-  // calc item's offset middle pos instead of using offsetTop/Height 
-  // directly which requires to wait for submenu's collapsing transition to 
+
+  // calc item's offset middle pos instead of using offsetTop/Height
+  // directly which requires to wait for submenu's collapsing transition to
   // complete first before it can return the correct pos.
  double getOffsetMiddle() {
     var p = this.parentNode as PolymerSelector;
@@ -78,24 +78,25 @@ class PolymerUiMenuItem extends PolymerUiThemeAware {
       var h = this.getItemHeight();
       return i * h + h/2 + p.items[0].offsetTop;
     }
+    return 0.0;
   }
- 
+
   void hrefChanged(old) {
-    isHideHref = (href == null && href.isEmpty); 
+    isHideHref = (href == null || href.isEmpty);
   }
-  
+
   int getItemHeight() {
     return this.offsetHeight;
   }
-  
+
   void updateIsShowIcon() {
-    isShowIcon = ((src != null && src.isNotEmpty) || (icon != null && icon.isNotEmpty)); 
+    isShowIcon = ((src != null && src.isNotEmpty) || (icon != null && icon.isNotEmpty));
   }
-  
+
   void srcChanged(old) {
     updateIsShowIcon();
   }
-  
+
   void iconChanged(old) {
     updateIsShowIcon();
   }
