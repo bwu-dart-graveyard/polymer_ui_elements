@@ -7,7 +7,7 @@ license that can be found in the LICENSE file.
 :host {
   box-shadow: inset -8px 0px 8px -4px rgba(0, 0, 0, 0.4);
 }
-  
+
 :host(.polymer-ui-light-theme:host) {
   box-shadow: inset -8px 0px 8px -4px rgba(0, 0, 0, 0.15);
   color: #333333;
@@ -21,7 +21,7 @@ license that can be found in the LICENSE file.
 }
 
 /*@polyfill :host :not(polymer-ui-submenu-item) > polymer-ui-menu */
-::content polymer-ui-menu {
+::content > polymer-ui-menu {
   background: none !important;
   padding: 0 10px;
   margin: 10px 0;
