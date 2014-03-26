@@ -1,0 +1,69 @@
+<!doctype html>
+<!--
+Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+the AUTHORS file for details. All rights reserved. Use of this source code is
+governed by a BSD-style license that can be found in the LICENSE file.
+This work is a port of the polymer-elements from the Polymer project,
+http://www.polymer-project.org/.
+-->
+<html>
+  <head>
+    <title>polymer-ui-iconset</title>
+
+    <link rel="import" href="packages/polymer/polymer.html">
+
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_iconset/polymer_ui_iconset.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_icon_button/polymer_ui_icon_button.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_toolbar/polymer_ui_toolbar.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.html">
+    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.html">
+
+    <link rel="stylesheet" href="packages/polymer_ui_elements/asset/base.css">
+
+    <script type="application/dart"> export "packages/polymer/init.dart";</script>
+    <script src="packages/browser/dart.js"></script>
+
+    <style>
+      polymer-ui-menu {
+        width: 300px;
+      }
+    </style>
+
+  </head>
+  <body class="polymer-ui-body-text" theme="polymer-ui-light-theme" unresolved>
+    <!-- using polymer icon set -->
+    <polymer-ui-toolbar>
+      <polymer-ui-icon-button icon="menu"></polymer-ui-icon-button>
+      <div flex>polymer icon set</div>
+      <polymer-ui-icon-button icon="trash"></polymer-ui-icon-button>
+    </polymer-ui-toolbar>
+    <br><br>
+    <polymer-ui-menu selected="0">
+      <polymer-ui-menu-item icon="add" label="Add"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="trash" label="Trash"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="settings" label="Settings"></polymer-ui-menu-item>
+    </polymer-ui-menu>
+    <br><br>
+
+    <!-- register user-defined icon set -->
+    <polymer-ui-iconset id="my-icons" src="packages/polymer_ui_elements/polymer_ui_iconset/my_icons.png" width="96" iconsize="24"
+        icons="location place starta stopb bus car train walk">
+    </polymer-ui-iconset>
+
+    <!-- use prefix (e.g. my-icons:location) to use user-defined icon set -->
+    <polymer-ui-toolbar>
+      <polymer-ui-icon-button icon="my-icons:location"></polymer-ui-icon-button>
+      <div flex>user-defined icon set</div>
+      <polymer-ui-icon-button icon="my-icons:bus"></polymer-ui-icon-button>
+      <polymer-ui-icon-button icon="my-icons:place"></polymer-ui-icon-button>
+      <polymer-ui-icon-button icon="trash"></polymer-ui-icon-button>
+    </polymer-ui-toolbar>
+    <br><br>
+    <polymer-ui-menu selected="0">
+      <polymer-ui-menu-item icon="my-icons:starta" label="Start"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="my-icons:stopb" label="Stop"></polymer-ui-menu-item>
+      <polymer-ui-menu-item icon="settings" label="Settings"></polymer-ui-menu-item>
+    </polymer-ui-menu>
+  </body>
+</html>
