@@ -7,13 +7,19 @@ This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/.
 -->
 <link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
+<link rel="import" href="../polymer_ui_iconset/polymer_ui_iconset.html">
+<link rel="import" href="polymer_ui_icons.html">
 
 <polymer-element name="polymer-ui-icon" extends="polymer-ui-theme-aware" attributes="src size index icon">
   <template>
     <link rel="stylesheet" href="polymer_ui_icon.css">
-    <!-- TODO remove style element and content when css import is fixed -->
-
+    <polymer-ui-iconset id='meta'></polymer-ui-iconset>
     <content></content>
+
+      <property theme="polymer-ui-light-theme" offsetx="24"></property>
+      <property theme="polymer-ui-dark-theme" offsetx="72"></property>
+    </polymer-ui-iconset>
+
   </template>
 
   <script type="application/dart" src='polymer_ui_icon.dart'></script>

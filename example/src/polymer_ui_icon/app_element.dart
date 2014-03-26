@@ -6,7 +6,6 @@
 
 library app_element;
 
-import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.dart' show
     PolymerUiIcon;
@@ -19,9 +18,8 @@ class AppElement extends PolymerElement {
 
   AppElement.created(): super.created();
 
-  enteredView() {
+  void enteredView() {
     super.enteredView();
-    icons = (document.createElement('polymer-ui-icon') as
-        PolymerUiIcon).icons.keys.toList();
+    icons = ($['meta'] as PolymerUiIcon).getIconset().iconMap.keys.toList();
   }
 }
