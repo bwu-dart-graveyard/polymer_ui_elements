@@ -105,7 +105,7 @@ class PolymerUiArrow extends PolymerElement {
 
   asyncUpdate() {
     if(_updateJob == null){
-      _updateJob = new Timer(Duration.ZERO, _update);
+      _updateJob = new Future(_update);
     }
   }
 
