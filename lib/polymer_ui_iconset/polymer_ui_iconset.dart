@@ -62,7 +62,7 @@ class PolymerUiIconset extends PolymerMeta {
 
       // TODO zoechi when is this called?
       //this.src = this.resolvePath(this.src, this.baseUri);
-      this.baseUri(); // an attempt but no use case
+      this.baseUri(); // an attempt but no use case see also https://code.google.com/p/dart/issues/detail?id=17757
     }
     var x = this.ownerDocument;
     super.ready();
@@ -74,7 +74,6 @@ class PolymerUiIconset extends PolymerMeta {
     this.iconMap = {};
     var ox = this.offsetx;
     var oy = this.offsety;
-    //print('iconChanged: id: $id, icons: ${this.icons}');
     if (this.icons != null && this.icons.isNotEmpty) {
       this.icons.split(new RegExp(r'\s+')).forEach((String name) {
         this.iconMap[name] = {
@@ -88,15 +87,11 @@ class PolymerUiIconset extends PolymerMeta {
           ox = this.offsetx;
           oy += this.iconsize;
         }
-        //print('iconsChanged: $id, name: $name, ox: $ox, oy: $oy');
       });
     }
   }
 
   void updateThemes() {
-    //print('updateThemes- id: ${this.id}');
-    //this.children.forEach((e) => print('  child ${e.localName}'));
-
     this.themes = {};
 
     var ts = this.querySelectorAll('property[theme]');
@@ -135,8 +130,8 @@ class PolymerUiIconset extends PolymerMeta {
   }
 
   String baseUri() {
+    // TODO https://code.google.com/p/dart/issues/detail?id=17757
     //var x = (this.ownerDocument.querySelector('#iconset') as LinkElement).href;
-    //print(x);
     return '';
   }
 }
