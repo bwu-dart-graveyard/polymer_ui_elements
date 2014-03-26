@@ -1,8 +1,8 @@
-// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see 
-// the AUTHORS file for details. All rights reserved. Use of this source code is 
+// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+// the AUTHORS file for details. All rights reserved. Use of this source code is
 // governed by a BSD-style license that can be found in the LICENSE file.
-// This work is a port of the polymer-elements from the Polymer project, 
-// http://www.polymer-project.org/. 
+// This work is a port of the polymer-elements from the Polymer project,
+// http://www.polymer-project.org/.
 
 /**
  * polymer-ui-arrow is styled to look like an arrow.
@@ -21,94 +21,94 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('polymer-ui-arrow')
 class PolymerUiArrow extends PolymerElement {
-  
+
   var _borders = {
     'up': 'Bottom',
     'down': 'Top',
     'left': 'Right',
     'right': 'Left'
   };
-  
+
   var _tops = {
     'up': 1,
     'down': -1,
     'left': 0,
     'right': 0
   };
-  
+
   var _lefts = {
     'up': 0,
     'down': 0,
     'left': 1,
     'right': -1
   };
-  
+
   /**
-   * Direction of the arrow.  Possible values are 'up', 'down', 'left' 
+   * Direction of the arrow.  Possible values are 'up', 'down', 'left'
    * and 'right'.
    */
   @published
   String direction = 'up';
-  
+
   /**
    * Size of the arrow.
    */
   @published
   num size = 10;
-  
+
   /**
    * Color of the arrow.
    */
   @published
   String color = '#fff';
-  
+
   /**
    * Border color.
    */
-  
+
   @published
   String borderColor= '#ccc';
-  
+
   /**
    * Arrow border width.
    */
   @published
   num borderWidth = 1;
-  
+
   var _updateJob;
-  
+
   PolymerUiArrow.created() : super.created();
-  
+
   ready() {
     this.asyncUpdate();
   }
-  
+
   directionChanged() {
     this.asyncUpdate();
   }
-  
+
   sizeChanged() {
     this.asyncUpdate();
   }
-  
+
   colorChanged() {
     this.asyncUpdate();
   }
-  
+
   borderColorChanged() {
     this.asyncUpdate();
   }
-  
+
   borderWidthChanged() {
     this.asyncUpdate();
   }
-  
+
   asyncUpdate() {
     if(_updateJob == null){
-      _updateJob = Timer.run(_update);
+      _updateJob = new Timer(Duration.ZERO, _update);
     }
   }
-  
+
   _update() {
     _updateJob = null;
     var os = this.$['outer'].style;
