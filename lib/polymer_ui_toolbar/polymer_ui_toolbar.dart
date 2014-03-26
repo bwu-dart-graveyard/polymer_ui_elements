@@ -1,13 +1,13 @@
-// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see 
-// the AUTHORS file for details. All rights reserved. Use of this source code is 
+// Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
+// the AUTHORS file for details. All rights reserved. Use of this source code is
 // governed by a BSD-style license that can be found in the LICENSE file.
-// This work is a port of the polymer-elements from the Polymer project, 
-// http://www.polymer-project.org/. 
+// This work is a port of the polymer-elements from the Polymer project,
+// http://www.polymer-project.org/.
 library polymer_ui_elements.polymer_ui_toolbar;
 
 import 'dart:html' show Event, Node, CustomEvent;
 import 'package:polymer/polymer.dart' show CustomTag, observable, published,
-ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved  
+ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
@@ -45,7 +45,7 @@ class PolymerUiToolbar extends PolymerUiThemeAware{
   PolymerUiToolbar.created() : super.created();
 
   final _logger = new Logger('PolymerUiToolbar');
-  
+
   @published String responsiveWidth = '800px';
   @observable bool queryMatches = false;
   @observable String mquery = '';
@@ -57,15 +57,16 @@ class PolymerUiToolbar extends PolymerUiThemeAware{
     defaultTheme = 'polymer-ui-light-theme';
     responsiveWidthChanged(null);
   }
-  
+
   void responsiveWidthChanged(old) {
     mquery = 'max-width: ${responsiveWidth}';
   }
-  
+
   void queryMatchesChanged(oldValue) {
     this.classes.toggle('narrow-layout', this.queryMatches);
   }
-  
+
+  // TODO remove when flexbox is updated
   // child notifies with this event, that we should add 'flexbox' to class
   void onPolymerClassChange(Event e, var details, Node node) {
     if(details is Map) {
@@ -74,18 +75,18 @@ class PolymerUiToolbar extends PolymerUiThemeAware{
           case 'add':
             this.classes.add(v);
             break;
-            
+
           case 'remove':
             this.classes.remove(v);
             break;
-            
+
           case 'toggle':
             this.classes.toggle(v);
             break;
         }
       });
     }
-  
+
     e.stopImmediatePropagation();
   }
 }

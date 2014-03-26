@@ -22,19 +22,35 @@ http://www.polymer-project.org/.
 
     <link rel="stylesheet" href="packages/polymer_ui_elements/asset/base.css">
     <style>
-      polymer-ui-toolbar.custom-toolbar {
+/*      polymer-ui-toolbar.custom-toolbar {
         font-size: 30px !important;
         background-color: orange;
       }
+TODO remove */
+
+      /* toolbar custom theme (would work even if toolbar is inside n-levels of Shadow DOM) */
+      body /shadow-deep/ polymer-ui-toolbar.my-custom-theme {
+        background-color: #5599FF;
+        color: #BBD6FF;
+        font-size: 28px;
+      }
+      body /shadow-deep/ polymer-ui-toolbar polymer-ui-icon-button.my-custom-theme:hover {
+        background-color: #77ABFA;
+      }
+      body /shadow-deep/ polymer-ui-toolbar polymer-ui-icon-button.my-custom-theme:hover /shadow/ polymer-ui-icon {
+        transition: -webkit-transform 0.33s;
+        transition: transform 0.33s;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
     </style>
 
-
   </head>
-  <body class="polymer-ui-body-text">
+  <body class="polymer-ui-body-text" unresolved>
 
     <polymer-ui-toolbar>
       <polymer-ui-icon-button icon="menu"></polymer-ui-icon-button>
-      <polymer-flex-area flex>Toolbar: naked</polymer-flex-area>
+      <polymer-flex-area flex>Toolbar: default theme</polymer-flex-area>
       <polymer-ui-icon-button icon="refresh"></polymer-ui-icon-button>
       <polymer-ui-icon-button icon="add"></polymer-ui-icon-button>
     </polymer-ui-toolbar>
@@ -74,13 +90,10 @@ http://www.polymer-project.org/.
       </div>
     </div>
     <br>
-    <br>
-    <h3>below here, not so much with the working</h3>
-    <br />
-    <p>color/font work via style inheritance only, cannot affect the icon without some other support ... pseudo?</p>
-    <polymer-ui-toolbar class="custom-toolbar">
-      <polymer-ui-icon-button src="src/polymer_ui_toolbar/star.png"></polymer-ui-icon-button>
-      <polymer-flex-area flex>Toolbar: custom</polymer-flex-area>
+    <polymer-ui-toolbar theme="my-custom-theme">
+      <polymer-ui-icon-button icon="menu"></polymer-ui-icon-button>
+      <polymer-flex-area flex>Toolbar: custom theme</polymer-flex-area>
+      <polymer-ui-icon-button icon="refresh"></polymer-ui-icon-button>
       <polymer-ui-icon-button icon="add"></polymer-ui-icon-button>
     </polymer-ui-toolbar>
   </body>
