@@ -1,6 +1,6 @@
 library polymer_ui_elements.polymer_ui_theme_aware.polymer_ui;
 
-import 'dart:html' show HtmlElement;
+import 'dart:html' show HtmlElement, ShadowRoot;
 
 typedef validateThemeFunc(HtmlElement element, {String theme, String activeTheme, String defaultTheme});
 
@@ -20,10 +20,16 @@ String validateTheme(HtmlElement element, {String theme, String activeTheme, Str
           newDefaultTheme = dt;
         }
       }
-      p = p.parent;
+
+      ShadowRoot shRoot;
+      if(p.parentNode != null && p.parentNode is ShadowRoot) {
+        p = (p.parentNode as ShadowRoot).host;
+      } else {
+        p = p.parent;
+      }
     }
   }
-  
+
   if (theme != null && theme.isNotEmpty) {
     return theme;
   } else if (newTheme != null && newTheme.isNotEmpty){
