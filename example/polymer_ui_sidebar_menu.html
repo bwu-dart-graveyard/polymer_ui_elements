@@ -20,7 +20,6 @@ http://www.polymer-project.org/.
 
     <link rel="stylesheet" href="packages/polymer_ui_elements/asset/base.css">
 
-    <script type="application/dart">export 'packages/polymer/init.dart';</script>
     <script src="packages/browser/dart.js"></script>
 
     <style>
@@ -38,7 +37,7 @@ http://www.polymer-project.org/.
       }
     </style>
   </head>
-  <body class="polymer-ui-body-text" theme="polymer-ui-dark-theme">
+  <body class="polymer-ui-body-text" theme="polymer-ui-dark-theme" unresolved>
     <polymer-ui-sidebar-menu selected="0" label="Polymer">
       <polymer-ui-submenu-item icon="settings" label="Home">
         <polymer-ui-menu-item label="Home 1"></polymer-ui-menu-item>
@@ -70,5 +69,7 @@ http://www.polymer-project.org/.
         <polymer-ui-menu-item label="Favorites 4"></polymer-ui-menu-item>
       </polymer-ui-submenu-item>
     </polymer-ui-sidebar-menu>
+
+    <script type="application/dart">export 'packages/polymer/init.dart';</script>
   </body>
 </html>
