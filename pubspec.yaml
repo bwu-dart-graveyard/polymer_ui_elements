@@ -15,7 +15,7 @@ dependencies:
 
 dependency_overrides:
   polymer_elements:
-    git: git@github.com:ErikGrimes/polymer_ui_elements.git
+    git: git@github.com:ErikGrimes/polymer_elements.git
 dev_dependencies:
   unittest:  ">=0.10.1+1 <1.0.0"
 transformers:
