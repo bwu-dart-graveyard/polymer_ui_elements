@@ -11,7 +11,7 @@ documentation: http://erikgrimes.github.io/polymer_elements/docs/index.html
 environment:
   sdk: ">=1.0.0 <2.0.0"
 dependencies:
-  polymer: ">=0.10.0-pre.5 <=1.0.0"
+  polymer: ">=0.10.0-pre.4 <=1.0.0"
 
 dependency_overrides:
   polymer_elements:
