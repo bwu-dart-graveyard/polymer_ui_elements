@@ -11,7 +11,7 @@ ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug
 // (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart' show PolymerUiThemeAware;
-import 'package:polymer_elements/polymer_selector/polymer_selector.dart' show PolymerSelector;
+import 'package:polymer_elements/src/interfaces.dart' show HasOffsetMiddle, HasItems;
 
 /**
  * polymer-ui-menu-item is styled to look like a menu item.  It should be used
@@ -22,7 +22,7 @@ import 'package:polymer_elements/polymer_selector/polymer_selector.dart' show Po
  *     <polymer-ui-menu-item icon="settings" label="Settings"></polymer-ui-menu-item>
  */
 @CustomTag('polymer-ui-menu-item')
-class PolymerUiMenuItem extends PolymerUiThemeAware {
+class PolymerUiMenuItem extends PolymerUiThemeAware implements HasOffsetMiddle {
   PolymerUiMenuItem.created() : super.created() {
     _logger.finest('created');
   }
@@ -72,7 +72,7 @@ class PolymerUiMenuItem extends PolymerUiThemeAware {
   // directly which requires to wait for submenu's collapsing transition to
   // complete first before it can return the correct pos.
  double getOffsetMiddle() {
-    var p = this.parentNode as PolymerSelector;
+    var p = this.parentNode as HasItems;
     if (p != null) {
       var i = p.items.indexOf(this);
       var h = this.getItemHeight();

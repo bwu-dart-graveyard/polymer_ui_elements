@@ -13,6 +13,7 @@ ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug
 // (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
 import 'package:polymer_ui_elements/polymer_ui_arrow/polymer_ui_arrow.dart' show PolymerUiArrow;
+import 'package:polymer_elements/src/interfaces.dart' show HasOffsetMiddle;
 
 /**
  * polymer-ui-nav-arrow is a polymer-ui-arrow that can be positioned to the
@@ -59,7 +60,7 @@ class PolymerUiNavArrow extends PolymerUiArrow {
     this.classes.toggle('hidden', !this.show);
   }
 
-  void targetChanged() {
+  void targetChanged(old) {
     this.show = (this.target != null);
 
     if (this.target != null) {
@@ -75,8 +76,12 @@ class PolymerUiNavArrow extends PolymerUiArrow {
   void move() {
     var t = this.target;
     // if the target has getOffsetMiddle(), use that instead
-    // TODO var y = t.getOffsetMiddle ? t.getOffsetMiddle() :
-      var y = (t.offsetTop + t.offsetHeight / 2);
+    double y;
+    if(t is HasOffsetMiddle) {
+      y = t.getOffsetMiddle();
+    } else {
+      y = (t.offsetTop + t.offsetHeight / 2);
+    }
     this.translateY(y);
   }
 }

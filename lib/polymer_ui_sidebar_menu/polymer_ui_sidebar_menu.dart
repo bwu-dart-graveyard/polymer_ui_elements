@@ -5,6 +5,7 @@
 // http://www.polymer-project.org/.
 library polymer_ui_elements.polymer_ui_sidebar_menu;
 
+import 'dart:html' as dom;
 import 'package:polymer/polymer.dart' show CustomTag, PolymerElement, published,
 ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved
 // https://code.google.com/p/dart/issues/detail?id=13849
@@ -27,12 +28,24 @@ import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show P
  */
 
 @CustomTag('polymer-ui-sidebar-menu')
-class PolymerUiSidebarHeader extends PolymerUiMenu {
-  PolymerUiSidebarHeader.created() : super.created() {
+class PolymerUiSidebarMenu extends PolymerUiMenu {
+  PolymerUiSidebarMenu.created() : super.created() {
     _logger.finest('created');
   }
 
   final _logger = new Logger('polymer-ui-sidebar-menu');
 
   @published String label = '';
+
+  @published var selectedItem;
+
+  @override
+  void enteredView() {
+    super.enteredView();
+    this.on['polymer-select'].listen((dom.CustomEvent e) {
+      if(e.detail['isSelected'] == true) {
+        selectedItem = e.detail['item'];
+      }
+    });
+  }
 }

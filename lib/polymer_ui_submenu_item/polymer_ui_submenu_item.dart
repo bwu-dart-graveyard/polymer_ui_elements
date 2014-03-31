@@ -7,13 +7,17 @@ library polymer_ui_elements.polymer_ui_submenu_item;
 
 import 'dart:async' show Stream;
 import 'dart:html' show CustomEvent, Element, EventStreamProvider;
-import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement, published,
-ChangeNotifier, reflectable; // TODO remove ChangeNotifier, reflectable when bug is solved
+import 'package:polymer/polymer.dart' show CustomTag, observable,
+    PolymerElement, published, ChangeNotifier, reflectable;
+    // TODO remove ChangeNotifier, reflectable when bug is solved
 // https://code.google.com/p/dart/issues/detail?id=13849
 // (https://code.google.com/p/dart/issues/detail?id=15095)
 import 'package:logging/logging.dart' show Logger;
-import 'package:polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.dart' show PolymerUiMenuItem;
-import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show PolymerUiMenu;
+import 'package:polymer_ui_elements/polymer_ui_menu_item/polymer_ui_menu_item.dart'
+    show PolymerUiMenuItem;
+import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show
+    PolymerUiMenu;
+import 'package:polymer_elements/src/interfaces.dart' show HasItems;
 
 /**
  * polymer-ui-submenu-item is a menu-item that can contains other menu-items.
@@ -35,25 +39,29 @@ import 'package:polymer_ui_elements/polymer_ui_menu/polymer_ui_menu.dart' show P
  *     </polymer-ui-menu>
  */
 @CustomTag('polymer-ui-submenu-item')
-class PolymerUiSubmenuItem extends PolymerUiMenuItem {
-  PolymerUiSubmenuItem.created() : super.created() {
+class PolymerUiSubmenuItem extends PolymerUiMenuItem implements HasItems {
+  PolymerUiSubmenuItem.created(): super.created() {
     _logger.finest('created');
   }
 
   final _logger = new Logger('PolymerUiSubmenuItem');
 
-  @published var selected;
-  @published Element selectedItem;
+  @published
+  var selected;
+  @published
+  Element selectedItem;
 
-  @published bool active = false;
+  @published
+  bool active = false;
 
-  @observable bool collapsed = true;
+  @observable
+  bool collapsed = true;
 
   static const EventStreamProvider<CustomEvent> _polymerSelectEvent =
       const EventStreamProvider<CustomEvent>('polymer-select');
 
   Stream<CustomEvent> get onPolymerSelect =>
-    PolymerUiSubmenuItem._polymerSelectEvent.forTarget(this);
+      PolymerUiSubmenuItem._polymerSelectEvent.forTarget(this);
 
   List<Element> get items {
     return (this.$['menu'] as PolymerUiMenu).items;
@@ -83,13 +91,16 @@ class PolymerUiSubmenuItem extends PolymerUiMenuItem {
     if (this.hasItems() && this.active) {
       this.collapsed = !this.collapsed;
       this.unselectAllItems();
-      this.fire('polymer-select', detail: {'isSelected': true, 'item': this});
+      this.fire('polymer-select', detail: {
+        'isSelected': true,
+        'item': this
+      });
     }
   }
 
   int getItemHeight() {
     var item = this.$['item'];
-    if(item != null) {
+    if (item != null) {
       return item.offsetHeight;
     }
     return 0;
