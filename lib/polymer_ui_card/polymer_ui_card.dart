@@ -85,8 +85,7 @@ class PolymerUiCard extends PolymerElement {
     }
   }
 
-  // TODO conflicts with animate method of super class
-  void animate(double x) {
+  void _animate(double x) {
     CssStyleDeclaration s = this.style;
     var d = x > 0 ? 1 : -1;
     var w = this._w * this._widthRatio;
@@ -110,7 +109,7 @@ class PolymerUiCard extends PolymerElement {
 
   void track(e) {
     if (this.swipeable) {
-      this.animate(e.dx);
+      this._animate(e.dx);
     }
   }
 
@@ -133,9 +132,9 @@ class PolymerUiCard extends PolymerElement {
     this._away = away;
     if (away) {
       var w = this._w * this._widthRatio;
-      this.animate(dir ? w : -w);
+      this._animate(dir ? w : -w);
     } else {
-      this.animate(0.0);
+      this._animate(0.0);
     }
   }
 
