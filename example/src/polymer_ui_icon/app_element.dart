@@ -22,4 +22,9 @@ class AppElement extends PolymerElement {
     super.enteredView();
     icons = ($['meta'] as PolymerUiIcon).getIconset().iconMap.keys.toList();
   }
+
+  // TODO remove workaround when https://code.google.com/p/dart/issues/detail?id=17981 is fixed
+  set icon(var x) {
+   // print(x);
+  }
 }

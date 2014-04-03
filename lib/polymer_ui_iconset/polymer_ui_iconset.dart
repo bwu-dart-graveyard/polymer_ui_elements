@@ -38,7 +38,7 @@ class PolymerUiIconset extends PolymerMeta {
   final _logger = new Logger('PolymerUiIconset');
 
   @published
-  String src;
+  String src2;
   @published
   int width = 0;
   @published
@@ -57,7 +57,7 @@ class PolymerUiIconset extends PolymerMeta {
     super.ready();
     // TODO(sorvell): ensure iconset's src is always relative to the main
     // document
-    if ((this.src != null && this.src.isNotEmpty) && (this.ownerDocument !=
+    if ((this.src2 != null && this.src2.isNotEmpty) && (this.ownerDocument !=
         document)) {
 
       // TODO zoechi when is this called?

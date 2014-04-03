@@ -8,7 +8,8 @@ library polymer_ui_elements.polymer_ui_icon;
 import 'package:polymer/polymer.dart';
 import 'package:logging/logging.dart';
 import 'package:polymer_ui_elements/polymer_ui_theme_aware/polymer_ui_theme_aware.dart';
-import 'package:polymer_ui_elements/polymer_ui_iconset/polymer_ui_iconset.dart' show PolymerUiIconset;
+import 'package:polymer_ui_elements/polymer_ui_iconset/polymer_ui_iconset.dart'
+    show PolymerUiIconset;
 
 /**
  * polymer-ui-icon is a 24x24 glyph expressed as a background-image.
@@ -63,8 +64,6 @@ class PolymerUiIcon extends PolymerUiThemeAware {
 
   // memoize offset because getComputedStyle is expensive
   var themes = {};
-
-  var icons = new Map<String, int>();
 
   @published
   int index;
@@ -131,13 +130,13 @@ class PolymerUiIcon extends PolymerUiThemeAware {
       n = a.removeAt(a.length - 1);
     }
 
-    var  s = getIconset(n);
+    var s = getIconset(n);
 
     if (s != null) {
       var o = s.getOffset(icon, this.activeTheme);
       if (o != null) {
         var r = this.size / s.iconsize;
-        this.style.backgroundImage = 'url(${s.src})';
+        this.style.backgroundImage = 'url(${s.src2})';
         this.style.backgroundPosition =
             '${-o['offsetx'] * r}px ${-o['offsety'] * r}px';
         this.style.backgroundSize = r == 1 ? 'auto' : '${s.width * r}px';
