@@ -1,7 +1,9 @@
-## 0.1.3
+## 0.2.0
 
 * upgrade to polymer 0.10.0
 * fix drone.io build (activate download of content_shell)
+* updating several elements fixed several issues
+* remove old css files (were kept for compatibitlity with older selectors)
 
 * port polymer-ui-iconset
   the `src` attribute is named `src2` as a workaround to make build succeed
@@ -11,7 +13,6 @@
 * update polymer-ui-menu-button
 * update polymer-ui-ratings
 * update polymer-ui-scaffold (still not usable)
-* remove old css files (were kept for compatibitlity with older selectors)
 * update polymer-ui-theme-aware
 * update polymer-ui-sidebar-menu
 * fix nav-arrow in polymer-ui-sidbar-menu

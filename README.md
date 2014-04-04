@@ -1,6 +1,6 @@
 # Basic visual elements for Polymer.dart
 
-A port of polymer.js' [polymer-ui-elements](http://www.polymer-project.org/docs/elements/#elements) to Polymer.dart.
+A port of polymer.js' [polymer-ui-elements](http://www.polymer-project.org/docs/elements/polymer-ui-elements.html) to Polymer.dart.
 The intent of the authors is to contribute the work to the Dart project itself (https://www.dartlang.org).
 
 ### Non-visual elements for Dart can be found in
@@ -10,13 +10,8 @@ The intent of the authors is to contribute the work to the Dart project itself (
 ## Documentation
 * The Dart source files of an element often contain some documentation (Dartdoc) how to use the element. You can also find this documentation online at  
 * [DartDoc](http://erikgrimes.github.io/polymer_elements/docs/index.html)
-    
-    We were not able to build JavaScript versions of the demo pages for polymer_ui_elements.
-    The high number of entry pages (examples) in this library leads to *out of memory* errors with pub build. 
-    Just using the polymer_ui_elements in your app won't lead to this kind of error.
-    
-    The demo pages linked below are from an earlier build and have been improved a lot since then. 
-
+* Almost each element has an associated demo page which shows how to use the element. 
+Open the 'demo' links below to take a look.
 The source code of these demo pages can be found in the [example subdirectory of the package](https://github.com/ErikGrimes/polymer_ui_elements/tree/master/example). 
 The actual implementation of the demo page is often outsourced to files in the `example/src/element_name` subdirectory.
 
@@ -29,19 +24,6 @@ dependencies:
   polymer_ui_elements:
 ```
 
-* to import a polymer_ui_element into your entry page HTML file, add the following line inside the `<head>` tag before any of the Dart and polymer `<script>` tags: 
-  
-```html  
-    <link rel="import" href="packages/polymer_ui_elements/polymer_ui_accordion/polymer_ui_accordion.html">
-```
-
-* to import a polymer_ui_element into any of your custom polymer elements, add the following line into your Polymer element HTML file before the `<polymer-element name="my-element">` start tag:
-  
-```html
-    <link rel="import" href="../../../packages/polymer_ui_elements/polymer_ui_icon/polymer_ui_icon.html">
-```
-
-
 ## Feedback
 
 Your feedback is very much appreciated. We are excited to hear about your experience using polymer_ui_elements.
@@ -52,9 +34,11 @@ Just [Create a New Issue](https://github.com/ErikGrimes/polymer_ui_elements/issu
 
 ## General notes
 
-* Current development status requires Dart SDK Dart version 1.0.3.0_r30939 (DEV)
+* Tested with Dart SDK version 1.3.0-dev.7.10
 
 ### Status
+
+* Status `(ported)` means it is ported but not yet usable
 
 Element name               |   Status    | Comment          | Demo
 -------------------------- | ----------- | ---------------- | ----
@@ -83,7 +67,7 @@ polymer-ui-scaffold        | (ported)    | depends on polymer-overlay which is n
 polymer-ui-sidebar         | (ported)    |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_sidebar.html)
 polymer-ui-sidebar-header  | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_sidebar_header.html)
 polymer-ui-sidebar-menu    | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_sidebar_menu.html)
-polymer-ui-splitter        | (ported)    | depends on pointer events which are not yet available | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_splitter.html)
+polymer-ui-splitter        | (ported)    | depends on pointer events which are not yet available | <!-- [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_splitter.html) -->
 polymer-ui-stock           | not started |                  | 
 polymer-ui-submenu-item    | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_submenu_item.html)
 polymer-ui-tabs            | ported      |                  | [demo](http://erikgrimes.github.io/polymer_elements/build_ui/polymer_ui_tabs.html)
@@ -97,5 +81,3 @@ polymer-ui-weather         | not started |                  |
 BSD 3-clause license (see [LICENSE](https://github.com/ErikGrimes/polymer-ui_elements/blob/master/LICENSE) file).
 
 [![Build Status](https://drone.io/github.com/ErikGrimes/polymer_ui_elements/status.png)](https://drone.io/github.com/ErikGrimes/polymer_ui_elements/latest)
-
-

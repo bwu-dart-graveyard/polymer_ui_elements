@@ -1,5 +1,5 @@
 name: polymer_ui_elements
-version: 0.1.3
+version: 0.2.0-pre.0
 authors:
 - Erik Grimes <erik.grimes@gmail.com>
 - Günter Zöchbauer <guenter@gzoechbauer.com>
@@ -11,14 +11,14 @@ documentation: http://erikgrimes.github.io/polymer_elements/docs/index.html
 environment:
   sdk: ">=1.0.0 <2.0.0"
 dependencies:
-  polymer: ">=0.10.0-pre.4 <=1.0.0"
-  polymer_elements:  
-    git: https://github.com/ErikGrimes/polymer_elements
-  
-dependency_overrides:
+  polymer: ">=0.10.0-pre.5 <=1.0.0"
+  polymer_elements: 0.2.0-pre.0
+#    git: https://github.com/ErikGrimes/polymer_elements
+#    path: ../polymer_elements
 
 dev_dependencies:
   unittest:  ">=0.10.1+1 <1.0.0"
+
 transformers:
 - polymer:
     entry_points:
