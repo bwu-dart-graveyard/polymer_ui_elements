@@ -34,7 +34,7 @@ Just [Create a New Issue](https://github.com/ErikGrimes/polymer_ui_elements/issu
 
 ## General notes
 
-* Tested with Dart SDK version 1.3.0-dev.7.10
+* Tested with Dart SDK version 1.3.0-dev.7.11
 
 ### Status
 
