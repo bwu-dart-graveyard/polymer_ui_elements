@@ -6,11 +6,13 @@ governed by a BSD-style license that can be found in the LICENSE file.
 This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/.
 -->
+
+
 <polymer-element name="polymer-ui-splitter" attributes="direction locked"
     on-trackstart="{{trackStart}}" on-track="{{track}}" on-trackend="{{trackEnd}}" on-drag-start="{{trackStart}}" on-drag="{{track}}" on-drag-end="{{trackEnd}}">
   <template>
     <link rel="stylesheet" href="polymer_ui_splitter.css">
   </template>
 
-  <script type="application/dart" src='polymer_ui_splitter.dart'></script>
+  <script type="application/dart;component=1" src='polymer_ui_splitter.dart'></script>
 </polymer-element>

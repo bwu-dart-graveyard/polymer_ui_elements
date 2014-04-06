@@ -6,14 +6,15 @@ governed by a BSD-style license that can be found in the LICENSE file.
 This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/.
 -->
+
+
 <link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
 <link rel="import" href="../../../packages/polymer_elements/polymer_selector/polymer_selector.html">
-
 
 <polymer-element name="polymer-ui-menu" extends="polymer-selector" attributes="theme" on-polymer-select="{{selectionChange}}">
   <template>
     <link rel="stylesheet" href="polymer_ui_menu.css">
     <shadow></shadow>
   </template>
-  <script type="application/dart" src='polymer_ui_menu.dart'></script>
+  <script type="application/dart;component=1" src='polymer_ui_menu.dart'></script>
 </polymer-element>

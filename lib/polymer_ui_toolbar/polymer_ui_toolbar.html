@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 Copyright (c) 2013, the polymer_elements.dart project authors.  Please see
 the AUTHORS file for details. All rights reserved. Use of this source code is
@@ -5,6 +6,8 @@ governed by a BSD-style license that can be found in the LICENSE file.
 This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/.
 -->
+
+
 <link rel="import" href="../../../packages/polymer_elements/polymer_flex_layout/polymer_flex_layout.html">
 <link rel="import" href="../../../packages/polymer_elements/polymer_media_query/polymer_media_query.html">
 <link rel="import" href="../polymer_ui_theme_aware/polymer_ui_theme_aware.html">
@@ -19,5 +22,5 @@ http://www.polymer-project.org/.
     <polymer-media-query id="mq" mquery="{{mquery}}" xmquery="max-width: {{responsiveWidth}}"></polymer-media-query> <!-- TODO temporarily wired in code because two way binding doesn't work this way currently: queryMatches="{{queryMatches}}" -->
     <content></content>
   </template>
-  <script type="application/dart" src='polymer_ui_toolbar.dart'></script>
+  <script type="application/dart;component=1" src='polymer_ui_toolbar.dart'></script>
 </polymer-element>

@@ -6,13 +6,14 @@ governed by a BSD-style license that can be found in the LICENSE file.
 This work is a port of the polymer-elements from the Polymer project,
 http://www.polymer-project.org/.
 -->
+
+
 <link rel="import" href="../../../packages/polymer_elements/polymer_anchor_point/polymer_anchor_point.html">
 <link rel="import" href="../../../packages/polymer_elements/polymer_media_query/polymer_media_query.html">
 <!-- // TODO import when available <link rel="import" href="../../../packages/polymer_elements/polymer_overlay/polymer_overlay.html"> -->
 <link rel="import" href="../polymer_ui_icon_button/polymer_ui_icon_button.html">
 <link rel="import" href="../polymer_ui_menu/polymer_ui_menu.html">
 <link rel="import" href="../polymer_ui_arrow/polymer_ui_arrow.html">
-
 
 <polymer-element name="polymer-ui-menu-button" attributes="src icon opened responsive halign valign selected selectedItem selectedClass valueattr multi parallax">
   <template>
@@ -32,5 +33,5 @@ http://www.polymer-project.org/.
     <!-- <polymer-overlay target="{{$['overlay']}}" opened="{{opened}}"></polymer-overlay> -->
   </template>
 
-  <script type="application/dart" src='polymer_ui_menu_button.dart'></script>
+  <script type="application/dart;component=1" src='polymer_ui_menu_button.dart'></script>
 </polymer-element>
