@@ -94,7 +94,7 @@ class PolymerUiClock extends PolymerElement {
   }
 
   void timeChanged() {
-    dateStr = [_days[time.weekday - 1], _months[time.month], time.day].join(' ');
+    dateStr = [_days[time.weekday - 1], _months[time.month - 1], time.day].join(' ');
     hours = time.hour;
     minutes = time.minute;
     seconds = time.second;
