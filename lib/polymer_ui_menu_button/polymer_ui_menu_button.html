@@ -19,6 +19,8 @@ http://www.polymer-project.org/.
   <template>
     <link rel="stylesheet" href="polymer_ui_menu_button.css">
     <link rel="stylesheet" href="../../../packages/polymer_elements/polymer_overlay/polymer_overlay.css" />
+    <link rel="stylesheet" href="packages/polymer_ui_elements/polymer_ui_nav_arrow/polymer_ui_nav_arrow.css">
+
     <polymer-ui-icon-button id="button" on-click="{{toggle}}"  src="{{src}}" icon="{{icon}}" active="{{opened}}" anchor-point="{{valign}}"></polymer-ui-icon-button> <!-- remove on-click when PointerEvents are available -->
     <div id="overlay" halign="{{halign}}" valign="{{valign}}">
       <div id="overlayBackdrop" pseudo="x-backdrop" overlay-toggle></div>
