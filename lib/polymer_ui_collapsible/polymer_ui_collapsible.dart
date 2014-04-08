@@ -50,6 +50,6 @@ class PolymerUiCollapsible extends PolymerElement {
   }
 
   void bodyTap(e) {
-    e.notap = true;
+    // TODO e.notap = true;
   }
 }
