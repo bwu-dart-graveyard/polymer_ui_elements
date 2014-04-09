@@ -5,7 +5,8 @@
 * updating several elements fixed several issues
 * remove old css files (were kept for compatibitlity with older selectors)
 
-* port polymer-ui-iconset
+* add polymer-ui-iconset
+
   the `src` attribute is named `src2` as a workaround to make build succeed
 * update polymer-ui-icon (uses now polymer-ui-iconset)
 * port polymer-ui-action-icons
@@ -23,6 +24,7 @@
 * update polymer-ui-button
 * update polymer-ui-toolbar and remove use of removed polymer-flex-area workaround
 * fix issue with weekday in polymer-ui-clock
+* fix polymer-ui-menu-button (depended on polymer-overlay which was added to polymer-elements)
 
 
 ## 0.1.2
