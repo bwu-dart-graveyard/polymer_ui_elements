@@ -12,9 +12,9 @@ environment:
   sdk: ">=1.2.0 <2.0.0"
 dependencies:
   polymer: ">=0.10.0-pre.8 <1.0.0"
-  polymer_elements: #0.2.0-pre.6
+  polymer_elements: 0.2.0-pre.6
 #    git: https://github.com/ErikGrimes/polymer_elements
-    path: ../polymer_elements
+#    path: ../polymer_elements
 
 dev_dependencies:
   unittest:  ">=0.10.1+1 <1.0.0"
