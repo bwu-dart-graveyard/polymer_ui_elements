@@ -62,7 +62,7 @@ class PolymerUiIconset extends PolymerMeta {
 
       // TODO zoechi when is this called?
       //this.src = this.resolvePath(this.src, this.baseUri);
-      this.baseUri(); // an attempt but no use case see also https://code.google.com/p/dart/issues/detail?id=17757
+      this.baseUri; // an attempt but no use case see also https://code.google.com/p/dart/issues/detail?id=17757
     }
     var x = this.ownerDocument;
     super.ready();
@@ -129,9 +129,10 @@ class PolymerUiIconset extends PolymerMeta {
     return i;
   }
 
-  String baseUri() {
-    // TODO https://code.google.com/p/dart/issues/detail?id=17757
-    //var x = (this.ownerDocument.querySelector('#iconset') as LinkElement).href;
-    return '';
-  }
+// seems to be implemented in PolymerElement now
+//  String baseUri() {
+//    // TODO https://code.google.com/p/dart/issues/detail?id=17757
+//    //var x = (this.ownerDocument.querySelector('#iconset') as LinkElement).href;
+//    return '';
+//  }
 }
