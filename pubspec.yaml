@@ -1,20 +1,20 @@
 name: polymer_ui_elements
 version: 0.2.0-pre.7
 authors:
-- Erik Grimes <erik.grimes@gmail.com>
 - Günter Zöchbauer <guenter@gzoechbauer.com>
+- Erik Grimes <erik.grimes@gmail.com>
 description: >
   A Dart port of polymer-ui-elements
   (https://github.com/Polymer/polymer-ui-elements).
-homepage: https://github.com/ErikGrimes/polymer_ui_elements
-documentation: http://erikgrimes.github.io/polymer_elements/docs/index.html
+homepage: https://github.com/bwu-dart/polymer_ui_elements
+documentation: http://bwu-dart.github.io/polymer_elements/docs/index.html
 environment:
   sdk: ">=1.3.0 <2.0.0"
 dependencies:
   polymer: ">=0.10.0-pre.10 <1.0.0"
   polymer_elements: #0.2.0-pre.7
-    git: https://github.com/ErikGrimes/polymer_elements
-#    path: ../polymer_elements
+#    git: https://github.com/bwu-dart/polymer_elements
+    path: ../polymer_elements
 
 dev_dependencies:
   unittest:  ">=0.10.1+2 <1.0.0"
