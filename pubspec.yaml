@@ -1,5 +1,5 @@
 name: polymer_ui_elements
-version: 0.2.0-pre.7
+version: 0.2.0-pre.8
 authors:
 - Günter Zöchbauer <guenter@gzoechbauer.com>
 - Erik Grimes <erik.grimes@gmail.com>
@@ -12,8 +12,8 @@ environment:
   sdk: ">=1.3.0 <2.0.0"
 dependencies:
   polymer: ">=0.10.0-pre.10 <1.0.0"
-  polymer_elements: 0.2.0-pre.7
-#    git: https://github.com/bwu-dart/polymer_elements
+  polymer_elements: #0.2.0-pre.8
+    git: https://github.com/bwu-dart/polymer_elements
 #    path: ../polymer_elements
 
 dev_dependencies:
