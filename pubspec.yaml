@@ -1,10 +1,10 @@
 name: polymer_ui_elements
-version: 0.2.0-pre.8
+version: 0.3.0
 authors:
 - Günter Zöchbauer <guenter@gzoechbauer.com>
 - Erik Grimes <erik.grimes@gmail.com>
 description: >
-  A Dart port of polymer-ui-elements
+  Unsupported and deprecated. A Dart port of polymer-ui-elements
   (https://github.com/Polymer/polymer-ui-elements).
 homepage: https://github.com/bwu-dart/polymer_ui_elements
 documentation: http://bwu-dart.github.io/polymer_elements/docs/index.html

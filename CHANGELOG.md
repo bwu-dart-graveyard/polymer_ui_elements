@@ -1,3 +1,7 @@
+## 0.3.0
+
+* Mark the project as unsupported.
+
 ## 0.2.0
 
 * upgrade to polymer 0.10.0
